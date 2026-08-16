@@ -199,7 +199,7 @@ Screens:
                               OnSelect: |-
                                 =UpdateContext({ itemSelected: true, CurrentItem: ThisItem })
                               TemplateFill: =If(ThisItem.IsSelected, RGBA(230, 230, 230, 1), RGBA(0, 0, 0, 0))
-                              TemplateSize: =104
+                              TemplateSize: =128
                             Children:
                               - Title1:
                                   Control: Label@2.5.1
@@ -219,7 +219,7 @@ Screens:
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.TemplateWidth - 86
                                     X: =16
-                                    Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle1.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+                                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8 + 2 + Body1.Size * 1.8 + SchedulingReadinessGalleryLabel1.Size * 1.8)) / 2
                               - Subtitle1:
                                   Control: Label@2.5.1
                                   Properties:
@@ -257,6 +257,27 @@ Screens:
                                     Width: =Title1.Width
                                     X: =Title1.X
                                     Y: =Subtitle1.Y + Subtitle1.Height
+                              - SchedulingReadinessGalleryLabel1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: |-
+                                      =If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid")), IsBlank(Find("consent", Lower(ThisItem.Notes)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =12
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: |-
+                                      =If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), "Scheduling: Blocked" & If(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), " | Contract", "") & If(And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))), " | NOA", ""), If(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid")), "Scheduling: Bid stage", If(IsBlank(Find("consent", Lower(ThisItem.Notes))), "Scheduling: Ready (verify consent)", "Scheduling: Ready")))
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Title1.Width
+                                    X: =Title1.X
+                                    Y: =Body1.Y + Body1.Height
                               - NextArrow1:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
@@ -1569,6 +1590,7 @@ Screens:
                                           DataField: ="field_13"
                                           Default: =ThisItem.Status
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_13')
+                                          Height: =SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 20
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_13')
                                           Required: =false
                                           Update: =DataCardValue14.Text
@@ -1646,6 +1668,122 @@ Screens:
                                                 Width: =30
                                                 Wrap: =false
                                                 Y: =DataCardKey14.Y
+                                          - StatusValuesGuidance1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                AutoHeight: =true
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =40
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: |-
+                                                  ="Recommended values: Pending Bid • Won • Awaiting Contract • Awaiting NOA • Ready For Scheduling • Scheduled • Active • Awaiting Signoff • Ready To Bill • Awaiting Payment • Paid • Warranty • Closed"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =true
+                                                X: =30
+                                                Y: =DataCardValue14.Y + DataCardValue14.Height + 20
+                                          - SchedulingReadinessHeader1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =26
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: ="Scheduling Readiness"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 10
+                                          - ContractStatusIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: |-
+                                                  =If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), RGBA(176, 120, 0, 1), If(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =22
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: |-
+                                                  =If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), "Contract Status: Not required yet (bid stage)", If(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), "Contract Status: On file", "Contract Status: Missing - blocks scheduling"))
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =SchedulingReadinessHeader1.Y + SchedulingReadinessHeader1.Height
+                                          - NOAStatusIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: |-
+                                                  =If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), RGBA(176, 120, 0, 1), If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =22
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: |-
+                                                  =If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), "NOA Status: Not required", If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), "NOA Status: Received", "NOA Status: Missing - blocks scheduling"))
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =ContractStatusIndicator1.Y + ContractStatusIndicator1.Height
+                                          - ConsentToStartIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: |-
+                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1))
+                                                Font: =Font.'Open Sans'
+                                                Height: =22
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: |-
+                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), "Consent To Start: Noted (warning only)", "Consent To Start: Not noted (warning only - does not block scheduling)")
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =NOAStatusIndicator1.Y + NOAStatusIndicator1.Height
+                                          - SchedulingReadinessIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: |-
+                                                  =If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), IsBlank(Find("consent", Lower(DataCardValue22.Text)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =26
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: |-
+                                                  =If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), "Scheduling Readiness: BLOCKED", If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), "Scheduling Readiness: Needs attention (bid stage)", If(IsBlank(Find("consent", Lower(DataCardValue22.Text))), "Scheduling Readiness: Ready (verify Consent To Start)", "Scheduling Readiness: Ready")))
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 6
                                     - NOA Received_DataCard1:
                                         Control: TypedDataCard@1.0.7
                                         Variant: ClassicTextualEdit
