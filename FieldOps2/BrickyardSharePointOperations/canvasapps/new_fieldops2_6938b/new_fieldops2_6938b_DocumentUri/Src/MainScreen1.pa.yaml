@@ -165,7 +165,7 @@ Screens:
                                     Height: =44
                                     Icon: =Icon.Add
                                     OnSelect: |-
-                                      =NewForm(Form1); UpdateContext({ newMode: true, useCalcTotals: false });
+                                      =NewForm(Form1); UpdateContext({ newMode: true, useCalcTotals: false, stageOverride: "Pre-Estimate" });
                                     PaddingBottom: =10
                                     PaddingLeft: =10
                                     PaddingRight: =10
@@ -428,7 +428,7 @@ Screens:
                                     Height: =50
                                     Icon: =Icon.Cancel
                                     OnSelect: |-
-                                      =ResetForm(Form1); UpdateContext({ editMode: false, newMode: false, useCalcTotals: false });
+                                      =ResetForm(Form1); UpdateContext({ editMode: false, newMode: false, useCalcTotals: false, stageOverride: Blank() });
                                     PaddingBottom: =12
                                     PaddingLeft: =12
                                     PaddingRight: =12
@@ -444,7 +444,7 @@ Screens:
                                     Height: =50
                                     Icon: =Icon.Edit
                                     OnSelect: |-
-                                      =UpdateContext({ editMode: true, selectedRecord: RecordsGallery1.Selected })
+                                      =UpdateContext({ editMode: true, selectedRecord: RecordsGallery1.Selected, stageOverride: Blank(), useCalcTotals: false })
                                     PaddingBottom: =12
                                     PaddingLeft: =12
                                     PaddingRight: =12
@@ -488,7 +488,7 @@ Screens:
                                     NumberOfColumns: =2
                                     OnFailure: =Notify("Cannot save. Please check if there are errors in the form.", NotificationType.Error)
                                     OnSuccess: |-
-                                      =UpdateContext({ CurrentItem: Self.LastSubmit, editMode: false, newMode: false, useCalcTotals: false })
+                                      =UpdateContext({ CurrentItem: Self.LastSubmit, editMode: false, newMode: false, useCalcTotals: false, stageOverride: Blank() })
                                   Children:
                                     - Title_DataCard1:
                                         Control: TypedDataCard@1.0.7
@@ -1699,7 +1699,7 @@ Screens:
                                           DataField: ="field_13"
                                           Default: =ThisItem.Status
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_13')
-                                          Height: =SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 20
+                                          Height: =AdvanceStageButton1.Y + AdvanceStageButton1.Height + 16
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_13')
                                           Required: =false
                                           Update: =DataCardValue14.Text
@@ -1726,7 +1726,8 @@ Screens:
                                               MetadataKey: FieldValue
                                               Properties:
                                                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                                Default: =Parent.Default
+                                                Default: |-
+                                                  =If(!IsBlank(stageOverride), stageOverride, Parent.Default)
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
@@ -1791,11 +1792,49 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  ="Recommended values: Pending Bid • Won • Awaiting Contract • Awaiting NOA • Ready For Scheduling • Scheduled • Active • Awaiting Signoff • Ready To Bill • Awaiting Payment • Paid • Warranty • Closed"
+                                                  ="Pipeline: Pre-Estimate • Pending Bid • Awaiting NOA • Ready For Scheduling • Scheduled • Active • Awaiting Signoff • Ready To Bill • Awaiting Payment • Paid • Warranty • Closed"
                                                 Width: =Parent.Width - 60
                                                 Wrap: =true
                                                 X: =30
                                                 Y: =DataCardValue14.Y + DataCardValue14.Height + 20
+                                          - StageProgressIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =24
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: |-
+                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "Stage: not set - pick a stage from the list below", "Stage " & Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) & " of 12: " & Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"))
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 8
+                                          - StageValidationIndicator1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: |-
+                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, RGBA(164, 38, 44, 1), If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1)))
+                                                Font: =Font.'Open Sans'
+                                                Height: =22
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: |-
+                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "This value is not on the standard pipeline - use Advance Stage to move it onto the list", If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"), "Standard pipeline value", "Legacy value - advancing moves it to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate")))
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =StageProgressIndicator1.Y + StageProgressIndicator1.Height
                                           - SchedulingReadinessHeader1:
                                               Control: Label@2.5.1
                                               Properties:
@@ -1813,7 +1852,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 10
+                                                Y: =StageValidationIndicator1.Y + StageValidationIndicator1.Height + 10
                                           - ContractStatusIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
@@ -1893,6 +1932,57 @@ Screens:
                                                 Wrap: =false
                                                 X: =30
                                                 Y: =ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 6
+                                          - AdvanceStageButton1:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =ColorFade(Self.Fill, -15%)
+                                                Color: =RGBA(255, 255, 255, 1)
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisplayMode: |-
+                                                  =If(And(Or(editMode, newMode), Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) < 12), DisplayMode.Edit, DisplayMode.Disabled)
+                                                Fill: =RGBA(164, 38, 44, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =36
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -20%)
+                                                OnSelect: |-
+                                                  =If(And(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1 >= 4, Or(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))))), Notify("Cannot advance to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ": " & If(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), "contract is not on file. ", "") & If(Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))), "NOA has not been received.", ""), NotificationType.Error, 4000), UpdateContext({ stageOverride: Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") }); Reset(DataCardValue14); Notify("Stage set to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ". Save the record to apply it.", NotificationType.Success, 3000))
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =Self.Fill
+                                                PressedFill: =Self.Color
+                                                Size: =11
+                                                Text: |-
+                                                  ="Advance Stage to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate")
+                                                Tooltip: ="Move this project to the next stage once its readiness checks pass"
+                                                Width: =260
+                                                X: =30
+                                                Y: =SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 10
+                                          - PreviousStageButton1:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =ColorFade(Self.Fill, -15%)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisplayMode: |-
+                                                  =If(And(Or(editMode, newMode), Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) > 1), DisplayMode.Edit, DisplayMode.Disabled)
+                                                Fill: =RGBA(255, 255, 255, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =36
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =RGBA(89, 0, 0, 1)
+                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                OnSelect: |-
+                                                  =UpdateContext({ stageOverride: Switch(Max(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) - 1, 1), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") }); Reset(DataCardValue14); Notify("Stage moved back to " & Switch(Max(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) - 1, 1), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ". Save the record to apply it.", NotificationType.Information, 3000)
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =Self.Fill
+                                                PressedFill: =RGBA(222, 179, 184, 1)
+                                                Size: =11
+                                                Text: ="Step Back"
+                                                Tooltip: ="Move this project back one stage"
+                                                Width: =120
+                                                X: =300
+                                                Y: =AdvanceStageButton1.Y
                                     - NOA Received_DataCard1:
                                         Control: TypedDataCard@1.0.7
                                         Variant: ClassicTextualEdit
