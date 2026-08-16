@@ -40,3 +40,28 @@ Awaiting Signoff → Ready To Bill → Awaiting Payment → Paid → Warranty �
 
 The form surfaces scheduling readiness (contract, NOA, consent to start), document guidance,
 financial roll-ups and project folder links for the selected record.
+
+## Features by build pass
+
+| Area | What the app does |
+| --- | --- |
+| Project list | Search, sort (newest / stage / amount owed), a "needs attention" filter (no stage, missing NOA, or money owed), a record count, a stage-coloured accent bar and a scheduling-readiness line per row |
+| Record header | Project title, stage chip coloured by lifecycle group, "Docs attached" badge, and a folder icon that opens the project's SharePoint document folder |
+| Workflow card | Stage indicator ("Stage n of 12"), readiness checks for contract / NOA / consent, **Advance Stage** (blocked with an explanation when readiness rules fail) and **Step Back** |
+| Financials | Total Expenses, Profit, Margin % and Currently Owed are calculated from their inputs; entered values are never overwritten on view — press **Use Calculated Totals** to apply them |
+| Documents | Document guidance checklist, the derived project folder path, **Open Project Folder** and **Open List Item** |
+| Safety | Success notification and data refresh after save, seeded "No" defaults for NOA Received / Billed / Change Order on new records, and a delete that requires a typed reason |
+
+### Folder link convention
+
+The folder buttons open
+`Shared Documents/Projects/<Project Title>` in the
+`BrickyardHousesHomeSolutionsLLC` site. No SharePoint column was added for this — if you would
+rather store an explicit folder URL per project, add a "Project Folder" column and the links can
+read from it instead.
+
+## Known limitations
+
+- Status is still a free-text SharePoint column; the 12 stages are enforced in the app, and
+  legacy values (for example "Won") are mapped onto the closest stage.
+- Sorting and the needs-attention filter can raise delegation warnings on very large lists.
