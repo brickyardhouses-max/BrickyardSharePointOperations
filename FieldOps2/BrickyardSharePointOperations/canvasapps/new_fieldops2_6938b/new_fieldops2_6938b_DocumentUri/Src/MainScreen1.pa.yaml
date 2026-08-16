@@ -377,6 +377,7 @@ Screens:
                                     Font: =Font.'Open Sans'
                                     FontWeight: =FontWeight.Semibold
                                     Height: =50
+                                    LayoutMinWidth: =120
                                     Size: =12
                                     Text: |-
                                       =If(RecordsGallery1.Selected.'Has attachments', "Docs attached", "No docs")
