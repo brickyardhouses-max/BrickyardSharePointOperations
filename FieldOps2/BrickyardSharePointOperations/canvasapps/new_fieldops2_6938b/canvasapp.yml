@@ -1,0 +1,37 @@
+CanvasApp:
+  Name: new_fieldops2_6938b
+  AppVersion: 2026-08-16T05:28:22.0000000Z
+  Status: Ready
+  CreatedByClientVersion: 3.26074.11.0
+  MinClientVersion: 3.26074.11.0
+  Tags: '{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","showStatusBar":"false","publisherVersion":"3.26074.11","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","m365CopilotSettingValue":"0","sienaVersion":"20260816T052822Z-3.26074.11.0"}'
+  IsCdsUpgraded: 0
+  GalleryItemId:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  BackgroundColor: RGBA(0,176,240,1)
+  DisplayName: Field Ops 2
+  Description: Enhance project oversight with Field Ops 2. Access, search, and update comprehensive project records, including financials, status, and contacts, from a centralized platform. Maintain accurate documentation and support operational efficiency for business users managing field operations.
+  CommitMessage: Save app with description provided in publish dialog.
+  Publisher:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  AuthorizationReferences: '[]'
+  ConnectionReferences: '{"7632f697-e6fb-4a3c-bd00-8b5ea187efbb":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://static.powerapps.com/resource/ppcr/releases/v1.0.1813/1.0.1813.4769/sharepointonline/icon.png","dataSources":["Projects-Tracker-Primary"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"https://bhhomesolutions.sharepoint.com/sites/BrickyardHousesHomeSolutionsLLC":{"dataSources":{"Projects-Tracker-Primary":{"tableName":"f404f8b1-b997-4ab6-9f30-4c26c259b9ad"}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write","providers/PowerPlatform.Governance/Operations/Delete"]},"977714e1-38f7-458e-96ed-f1d49ec0bf13":{"id":"/providers/microsoft.powerapps/apis/shared_microsoftcopilotstudio","displayName":"Microsoft Copilot Studio","iconUri":"https://static.powerapps.com/resource/ppcr/releases/v1.0.1820/1.0.1820.4809/microsoftcopilotstudio/icon.png","dataSources":["MicrosoftCopilotStudio"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"c7332154-aed4-4a3a-8b83-c5164c5d164d":{"id":"/providers/microsoft.powerapps/apis/shared_copilotforfinance","displayName":"Copilot for Finance","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1793/1.0.1793.4565/copilotforfinance/icon.png","dataSources":["CopilotforFinance"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}'
+  DatabaseReferences: '{}'
+  AppComponents: '[]'
+  AppComponentDependencies: '[]'
+  CanConsumeAppPass: 1
+  CanvasAppType: 0
+  BypassConsent: 0
+  AdminControlBypassConsent: 0
+  EmbeddedApp:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  IntroducedVersion: 1.0
+  CdsDependencies: '{"cdsdependencies":[]}'
+  IsCustomizable: 1
+  BackgroundImageUri: /canvasapps/new_fieldops2_6938b/new_fieldops2_6938b_BackgroundImageUri
+  DocumentUri: /canvasapps/new_fieldops2_6938b/new_fieldops2_6938b_DocumentUri.msapp
+  AdditionalUris:
+    AdditionalUri: /canvasapps/new_fieldops2_6938b/new_fieldops2_6938b_AdditionalUris0_identity.json
