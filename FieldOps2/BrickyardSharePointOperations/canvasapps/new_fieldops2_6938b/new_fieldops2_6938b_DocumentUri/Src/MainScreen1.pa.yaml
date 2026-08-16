@@ -304,6 +304,19 @@ Screens:
                                     OnSelect: =Select(Parent)
                                     Width: =Parent.TemplateWidth
                                     Y: =Parent.TemplateHeight - Self.Height
+                              - StageAccentBar1:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(89, 0, 0, 1)
+                                    Fill: |-
+                                      =If(Trim(ThisItem.Status) in ["Paid", "Warranty", "Closed"], RGBA(16, 124, 16, 1), If(Trim(ThisItem.Status) in ["Ready To Bill", "Awaiting Payment", "Billed"], RGBA(164, 38, 44, 1), If(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(ThisItem.Status)), RGBA(166, 166, 166, 1), RGBA(176, 120, 0, 1)))))
+                                    Height: =Parent.TemplateHeight - Separator1.Height - 16
+                                    OnSelect: =Select(Parent)
+                                    Tooltip: |-
+                                      =If(IsBlank(Trim(ThisItem.Status)), "No stage set", "Stage: " & Trim(ThisItem.Status))
+                                    Width: =4
+                                    X: =7
+                                    Y: =8
                               - Rectangle1:
                                   Control: Rectangle@2.3.0
                                   Properties:
@@ -368,6 +381,27 @@ Screens:
                                     FillPortions: =1
                                     Font: =Font.'Open Sans'
                                     Text: =RecordsGallery1.Selected.'Title'
+                              - StageChipLabel1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(255, 255, 255, 1)
+                                    Fill: |-
+                                      =If(Trim(RecordsGallery1.Selected.Status) in ["Paid", "Warranty", "Closed"], RGBA(16, 124, 16, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready To Bill", "Awaiting Payment", "Billed"], RGBA(164, 38, 44, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(166, 166, 166, 1), RGBA(176, 120, 0, 1)))))
+                                    FillPortions: =0
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =28
+                                    LayoutMinWidth: =150
+                                    Size: =12
+                                    Text: |-
+                                      =If(IsBlank(Trim(RecordsGallery1.Selected.Status)), "No stage set", Trim(RecordsGallery1.Selected.Status))
+                                    Tooltip: ="Current pipeline stage for this project"
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Visible: =!newMode
+                                    Width: =150
+                                    Wrap: =false
                               - SelectedRecordDocsLabel1:
                                   Control: Label@2.5.1
                                   Properties:
@@ -499,6 +533,7 @@ Screens:
                                           DataField: ="Title"
                                           Default: =ThisItem.Title
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'Title')
+                                          Height: =ErrorMessage1.Y + ErrorMessage1.Height + 26
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'Title')
                                           Required: =false
                                           Update: =DataCardValue1.Text
@@ -506,6 +541,22 @@ Screens:
                                           X: =0
                                           Y: =0
                                         Children:
+                                          - SectionHeaderClientLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Client & Site"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey1:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -519,7 +570,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DataCardValue1:
                                               Control: Classic/TextInput@2.3.2
                                               MetadataKey: FieldValue
@@ -1015,12 +1066,29 @@ Screens:
                                           DataField: ="field_6"
                                           Default: =ThisItem.'Bid Amount'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_6')
+                                          Height: =ErrorMessage7.Y + ErrorMessage7.Height + 26
                                           Required: =false
                                           Update: =Value(DataCardValue7.Text)
                                           Width: =458
                                           X: =0
                                           Y: =6
                                         Children:
+                                          - SectionHeaderFinancialsLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Financials"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey7:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -1034,7 +1102,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DataCardValue7:
                                               Control: Classic/TextInput@2.3.2
                                               MetadataKey: FieldValue
@@ -1707,6 +1775,22 @@ Screens:
                                           X: =0
                                           Y: =3
                                         Children:
+                                          - SectionHeaderWorkflowLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Workflow"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey14:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -1720,7 +1804,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DataCardValue14:
                                               Control: Classic/TextInput@2.3.2
                                               MetadataKey: FieldValue
@@ -2164,6 +2248,7 @@ Screens:
                                           DataField: ="field_16"
                                           Default: =ThisItem.Billed
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_16')
+                                          Height: =ErrorMessage17.Y + ErrorMessage17.Height + 26
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_16')
                                           Required: =false
                                           Update: =DataCardValue17.Text
@@ -2171,6 +2256,22 @@ Screens:
                                           X: =0
                                           Y: =10
                                         Children:
+                                          - SectionHeaderBillingLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Billing & Payment"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey17:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -2184,7 +2285,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DataCardValue17:
                                               Control: Classic/TextInput@2.3.2
                                               MetadataKey: FieldValue
@@ -2619,6 +2720,22 @@ Screens:
                                           X: =0
                                           Y: =5
                                         Children:
+                                          - SectionHeaderDocumentsLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Documents"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey23:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -2632,7 +2749,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DocumentGuidanceHeader1:
                                               Control: Label@2.5.1
                                               Properties:
@@ -2944,6 +3061,7 @@ Screens:
                                           DataField: ="field_21"
                                           Default: =ThisItem.Notes
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_21')
+                                          Height: =ErrorMessage22.Y + ErrorMessage22.Height + 26
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_21')
                                           Required: =false
                                           Update: =DataCardValue22.Text
@@ -2951,6 +3069,22 @@ Screens:
                                           X: =0
                                           Y: =12
                                         Children:
+                                          - SectionHeaderNotesLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =26
+                                                PaddingLeft: =0
+                                                Size: =15
+                                                Text: ="Notes"
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =6
                                           - DataCardKey22:
                                               Control: Label@2.5.1
                                               MetadataKey: FieldName
@@ -2964,7 +3098,7 @@ Screens:
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =10
+                                                Y: =36
                                           - DataCardValue22:
                                               Control: Classic/TextInput@2.3.2
                                               MetadataKey: FieldValue
