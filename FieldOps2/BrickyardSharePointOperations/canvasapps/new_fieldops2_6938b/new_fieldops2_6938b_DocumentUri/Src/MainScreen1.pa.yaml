@@ -347,6 +347,22 @@ Screens:
                                     FillPortions: =1
                                     Font: =Font.'Open Sans'
                                     Text: =RecordsGallery1.Selected.'Title'
+                              - SelectedRecordDocsLabel1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(89, 0, 0, 1)
+                                    Color: =If(RecordsGallery1.Selected.'Has attachments', RGBA(16, 124, 16, 1), RGBA(166, 166, 166, 1))
+                                    FillPortions: =0
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =50
+                                    Size: =12
+                                    Text: |-
+                                      =If(RecordsGallery1.Selected.'Has attachments', "Docs attached", "No docs")
+                                    Tooltip: ="Documents for this project are listed in the Attachments section of the form."
+                                    VerticalAlign: =VerticalAlign.Middle
+                                    Visible: =!newMode
+                                    Width: =120
                               - SubmitFormButton1:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
@@ -961,7 +977,7 @@ Screens:
                                           Update: =Value(DataCardValue7.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =5
+                                          Y: =6
                                         Children:
                                           - DataCardKey7:
                                               Control: Label@2.5.1
@@ -1046,7 +1062,7 @@ Screens:
                                           Update: =Value(DataCardValue8.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =5
+                                          Y: =6
                                         Children:
                                           - DataCardKey8:
                                               Control: Label@2.5.1
@@ -1131,7 +1147,7 @@ Screens:
                                           Update: =Value(DataCardValue9.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =6
+                                          Y: =7
                                         Children:
                                           - DataCardKey9:
                                               Control: Label@2.5.1
@@ -1216,7 +1232,7 @@ Screens:
                                           Update: =Value(DataCardValue10.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =6
+                                          Y: =7
                                         Children:
                                           - DataCardKey10:
                                               Control: Label@2.5.1
@@ -1301,7 +1317,7 @@ Screens:
                                           Update: =Value(DataCardValue11.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =7
+                                          Y: =8
                                         Children:
                                           - DataCardKey11:
                                               Control: Label@2.5.1
@@ -1386,7 +1402,7 @@ Screens:
                                           Update: =Value(DataCardValue12.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =7
+                                          Y: =8
                                         Children:
                                           - DataCardKey12:
                                               Control: Label@2.5.1
@@ -1472,7 +1488,7 @@ Screens:
                                           Update: =DataCardValue13.Text
                                           Width: =458
                                           X: =0
-                                          Y: =8
+                                          Y: =9
                                         Children:
                                           - DataCardKey13:
                                               Control: Label@2.5.1
@@ -1816,7 +1832,7 @@ Screens:
                                           Update: =DataCardValue17.Text
                                           Width: =458
                                           X: =0
-                                          Y: =9
+                                          Y: =10
                                         Children:
                                           - DataCardKey17:
                                               Control: Label@2.5.1
@@ -1901,7 +1917,7 @@ Screens:
                                           Update: =Value(DataCardValue18.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =9
+                                          Y: =10
                                         Children:
                                           - DataCardKey18:
                                               Control: Label@2.5.1
@@ -1986,7 +2002,7 @@ Screens:
                                           Update: =Value(DataCardValue19.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =10
+                                          Y: =11
                                         Children:
                                           - DataCardKey19:
                                               Control: Label@2.5.1
@@ -2071,7 +2087,7 @@ Screens:
                                           Update: =Value(DataCardValue20.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =10
+                                          Y: =11
                                         Children:
                                           - DataCardKey20:
                                               Control: Label@2.5.1
@@ -2229,6 +2245,249 @@ Screens:
                                                 Width: =30
                                                 Wrap: =false
                                                 Y: =DataCardKey21.Y
+                                    - Attachments_DataCard1:
+                                        Control: TypedDataCard@1.0.7
+                                        Variant: ClassicAttachmentsEdit
+                                        IsLocked: false
+                                        Properties:
+                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          DataField: ="{Attachments}"
+                                          Default: =ThisItem.Attachments
+                                          DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'{Attachments}')
+                                          Height: =DataCardValue23.Y + DataCardValue23.Height + 30
+                                          Required: =false
+                                          Update: =DataCardValue23.Attachments
+                                          Width: =458
+                                          X: =0
+                                          Y: =5
+                                        Children:
+                                          - DataCardKey23:
+                                              Control: Label@2.5.1
+                                              MetadataKey: FieldName
+                                              Properties:
+                                                AutoHeight: =true
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =34
+                                                Text: =Parent.DisplayName
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =10
+                                          - DocumentGuidanceHeader1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =24
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: ="Documents to attach for this project"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DataCardKey23.Y + DataCardKey23.Height
+                                          - DocumentGuidanceContract1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Contract"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceHeader1.Y + DocumentGuidanceHeader1.Height
+                                          - DocumentGuidanceNOA1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• NOA"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceContract1.Y + DocumentGuidanceContract1.Height
+                                          - DocumentGuidanceConsentToStart1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Consent To Start"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceNOA1.Y + DocumentGuidanceNOA1.Height
+                                          - DocumentGuidanceCompletionSignoff1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Completion Signoff"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceConsentToStart1.Y + DocumentGuidanceConsentToStart1.Height
+                                          - DocumentGuidanceChangeOrder1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Change Order"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceCompletionSignoff1.Y + DocumentGuidanceCompletionSignoff1.Height
+                                          - DocumentGuidanceWarranty1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Warranty"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceChangeOrder1.Y + DocumentGuidanceChangeOrder1.Height
+                                          - DocumentGuidanceMaintenanceGuide1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(70, 68, 64, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =20
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =11
+                                                Text: ="• Maintenance Guide"
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceWarranty1.Y + DocumentGuidanceWarranty1.Height
+                                          - AttachmentPresenceLabel1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1))
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =26
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =12
+                                                Text: |-
+                                                  =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), "Documents on file: " & CountRows(Parent.Default) & " attached below", "No documents attached yet")
+                                                Width: =Parent.Width - 60
+                                                Wrap: =false
+                                                X: =30
+                                                Y: =DocumentGuidanceMaintenanceGuide1.Y + DocumentGuidanceMaintenanceGuide1.Height + 6
+                                          - DataCardValue23:
+                                              Control: Attachments@2.3.0
+                                              MetadataKey: FieldValue
+                                              Properties:
+                                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                                DisplayMode: =Parent.DisplayMode
+                                                Font: =Font.'Open Sans'
+                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                ItemColor: =RGBA(255, 255, 255, 1)
+                                                ItemFill: =RGBA(164, 38, 44, 1)
+                                                ItemHoverFill: =RGBA(222, 179, 184, 1)
+                                                Items: =Parent.Default
+                                                PaddingBottom: =5
+                                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                                PaddingRight: =5
+                                                PaddingTop: =5
+                                                PressedColor: =RGBA(255, 255, 255, 1)
+                                                PressedFill: =RGBA(89, 0, 0, 1)
+                                                Tooltip: =Parent.DisplayName
+                                                Width: =Parent.Width - 60
+                                                X: =30
+                                                Y: =AttachmentPresenceLabel1.Y + AttachmentPresenceLabel1.Height + 5
+                                          - ErrorMessage23:
+                                              Control: Label@2.5.1
+                                              MetadataKey: ErrorMessage
+                                              Properties:
+                                                AutoHeight: =true
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(168, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =10
+                                                Live: =Live.Assertive
+                                                PaddingBottom: =0
+                                                PaddingLeft: =0
+                                                PaddingRight: =0
+                                                PaddingTop: =0
+                                                Size: =14
+                                                Text: =Parent.Error
+                                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                                Width: =Parent.Width - 60
+                                                X: =30
+                                                Y: =DataCardValue23.Y + DataCardValue23.Height
+                                          - StarVisible23:
+                                              Control: Label@2.5.1
+                                              MetadataKey: FieldRequired
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 0, 0, 1)
+                                                Color: =RGBA(89, 0, 0, 1)
+                                                Font: =Font.'Open Sans'
+                                                Height: =DataCardKey23.Height
+                                                Text: ="*"
+                                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                                Width: =30
+                                                Wrap: =false
+                                                Y: =DataCardKey23.Y
                                     - Notes_DataCard1:
                                         Control: TypedDataCard@1.0.7
                                         Variant: ClassicTextualEdit
@@ -2243,7 +2502,7 @@ Screens:
                                           Update: =DataCardValue22.Text
                                           Width: =458
                                           X: =0
-                                          Y: =11
+                                          Y: =12
                                         Children:
                                           - DataCardKey22:
                                               Control: Label@2.5.1
@@ -2315,92 +2574,6 @@ Screens:
                                                 Width: =30
                                                 Wrap: =false
                                                 Y: =DataCardKey22.Y
-                                    - Attachments_DataCard1:
-                                        Control: TypedDataCard@1.0.7
-                                        Variant: ClassicAttachmentsEdit
-                                        IsLocked: true
-                                        Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
-                                          DataField: ="{Attachments}"
-                                          Default: =ThisItem.Attachments
-                                          DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'{Attachments}')
-                                          Required: =false
-                                          Update: =DataCardValue23.Attachments
-                                          Width: =458
-                                          X: =1
-                                          Y: =11
-                                        Children:
-                                          - DataCardKey23:
-                                              Control: Label@2.5.1
-                                              MetadataKey: FieldName
-                                              Properties:
-                                                AutoHeight: =true
-                                                BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
-                                                Font: =Font.'Open Sans'
-                                                Height: =34
-                                                Text: =Parent.DisplayName
-                                                Width: =Parent.Width - 60
-                                                Wrap: =false
-                                                X: =30
-                                                Y: =10
-                                          - DataCardValue23:
-                                              Control: Attachments@2.3.0
-                                              MetadataKey: FieldValue
-                                              Properties:
-                                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                                DisplayMode: =Parent.DisplayMode
-                                                Font: =Font.'Open Sans'
-                                                HoverFill: =RGBA(222, 179, 184, 1)
-                                                ItemColor: =RGBA(255, 255, 255, 1)
-                                                ItemFill: =RGBA(164, 38, 44, 1)
-                                                ItemHoverFill: =RGBA(222, 179, 184, 1)
-                                                Items: =Parent.Default
-                                                PaddingBottom: =5
-                                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                                PaddingRight: =5
-                                                PaddingTop: =5
-                                                PressedColor: =RGBA(255, 255, 255, 1)
-                                                PressedFill: =RGBA(89, 0, 0, 1)
-                                                Tooltip: =Parent.DisplayName
-                                                Width: =Parent.Width - 60
-                                                X: =30
-                                                Y: =DataCardKey23.Y + DataCardKey23.Height + 5
-                                          - ErrorMessage23:
-                                              Control: Label@2.5.1
-                                              MetadataKey: ErrorMessage
-                                              Properties:
-                                                AutoHeight: =true
-                                                BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(168, 0, 0, 1)
-                                                Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Semibold
-                                                Height: =10
-                                                Live: =Live.Assertive
-                                                PaddingBottom: =0
-                                                PaddingLeft: =0
-                                                PaddingRight: =0
-                                                PaddingTop: =0
-                                                Size: =14
-                                                Text: =Parent.Error
-                                                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                                Width: =Parent.Width - 60
-                                                X: =30
-                                                Y: =DataCardValue23.Y + DataCardValue23.Height
-                                          - StarVisible23:
-                                              Control: Label@2.5.1
-                                              MetadataKey: FieldRequired
-                                              Properties:
-                                                Align: =Align.Center
-                                                BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
-                                                Font: =Font.'Open Sans'
-                                                Height: =DataCardKey23.Height
-                                                Text: ="*"
-                                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                                Width: =30
-                                                Wrap: =false
-                                                Y: =DataCardKey23.Y
                   - DeleteConfirmDialogContainer1:
                       Control: GroupContainer@1.5.0
                       Variant: AutoLayout
