@@ -5530,7 +5530,7 @@
                       {
                         "Property": "Items",
                         "Category": "Data",
-                        "InvariantScript": "Search([@'Projects-Tracker-Primary'], SearchInput1.Text, Title, Title)",
+                        "InvariantScript": "Search([@'Projects-Tracker-Primary'], SearchInput1.Text, Title, 'Site Address', 'Agency/Insurer')",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -6799,7 +6799,7 @@
                           {
                             "Property": "Text",
                             "Category": "Data",
-                            "InvariantScript": "ThisItem.'Agency/Insurer'",
+                            "InvariantScript": "If(IsBlank(ThisItem.Status), \"No status\", ThisItem.Status) & \" | NOA: \" & If(IsBlank(ThisItem.'NOA Received'), \"-\", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', \" | Docs\", \"\")",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -13543,7 +13543,7 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "0",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -15127,13 +15127,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "2",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -16711,7 +16711,7 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "0",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -18295,13 +18295,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "2",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -19879,7 +19879,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "3",
+                                "InvariantScript": "5",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -21442,7 +21442,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "3",
+                                "InvariantScript": "5",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -23005,7 +23005,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "4",
+                                "InvariantScript": "6",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -24568,7 +24568,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "4",
+                                "InvariantScript": "6",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -26131,7 +26131,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "5",
+                                "InvariantScript": "7",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -27694,7 +27694,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "5",
+                                "InvariantScript": "7",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -29263,7 +29263,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "6",
+                                "InvariantScript": "8",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -30841,13 +30841,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "6",
+                                "InvariantScript": "3",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -32425,13 +32425,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "0",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "7",
+                                "InvariantScript": "3",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -34009,13 +34009,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "7",
+                                "InvariantScript": "4",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -35599,7 +35599,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "8",
+                                "InvariantScript": "9",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -37177,7 +37177,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "8",
+                                "InvariantScript": "9",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -38740,7 +38740,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "9",
+                                "InvariantScript": "10",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -40303,7 +40303,7 @@
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "9",
+                                "InvariantScript": "10",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -41866,13 +41866,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "0",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "10",
+                                "InvariantScript": "4",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -43450,13 +43450,13 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "1",
+                                "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
                               },
                               {
                                 "Property": "Y",
                                 "Category": "Design",
-                                "InvariantScript": "10",
+                                "InvariantScript": "11",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -45028,7 +45028,7 @@
                               {
                                 "Property": "X",
                                 "Category": "Design",
-                                "InvariantScript": "0",
+                                "InvariantScript": "1",
                                 "RuleProviderType": "Unknown"
                               },
                               {

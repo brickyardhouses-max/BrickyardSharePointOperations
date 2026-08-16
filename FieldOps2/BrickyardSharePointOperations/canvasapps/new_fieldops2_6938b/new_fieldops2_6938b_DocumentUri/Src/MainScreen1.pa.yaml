@@ -194,7 +194,7 @@ Screens:
                               BorderColor: =RGBA(89, 0, 0, 1)
                               Default: =CurrentItem
                               Fill: =RGBA(250, 250, 250, 1)
-                              Items: =Search([@'Projects-Tracker-Primary'], SearchInput1.Text, Title, Title)
+                              Items: =Search([@'Projects-Tracker-Primary'], SearchInput1.Text, Title, 'Site Address', 'Agency/Insurer')
                               LayoutMinWidth: =0
                               OnSelect: |-
                                 =UpdateContext({ itemSelected: true, CurrentItem: ThisItem })
@@ -251,7 +251,8 @@ Screens:
                                     PaddingRight: =0
                                     PaddingTop: =0
                                     Size: =12
-                                    Text: =ThisItem.'Agency/Insurer'
+                                    Text: |-
+                                      =If(IsBlank(ThisItem.Status), "No status", ThisItem.Status) & " | NOA: " & If(IsBlank(ThisItem.'NOA Received'), "-", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', " | Docs", "")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title1.Width
                                     X: =Title1.X
@@ -616,7 +617,7 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue3.Text
                                           Width: =458
-                                          X: =0
+                                          X: =1
                                           Y: =1
                                         Children:
                                           - DataCardKey3:
@@ -702,8 +703,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue4.Text
                                           Width: =458
-                                          X: =1
-                                          Y: =1
+                                          X: =0
+                                          Y: =2
                                         Children:
                                           - DataCardKey4:
                                               Control: Label@2.5.1
@@ -788,7 +789,7 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue5.Text
                                           Width: =458
-                                          X: =0
+                                          X: =1
                                           Y: =2
                                         Children:
                                           - DataCardKey5:
@@ -874,8 +875,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue6.Text
                                           Width: =458
-                                          X: =1
-                                          Y: =2
+                                          X: =0
+                                          Y: =1
                                         Children:
                                           - DataCardKey6:
                                               Control: Label@2.5.1
@@ -960,7 +961,7 @@ Screens:
                                           Update: =Value(DataCardValue7.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =3
+                                          Y: =5
                                         Children:
                                           - DataCardKey7:
                                               Control: Label@2.5.1
@@ -1045,7 +1046,7 @@ Screens:
                                           Update: =Value(DataCardValue8.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =3
+                                          Y: =5
                                         Children:
                                           - DataCardKey8:
                                               Control: Label@2.5.1
@@ -1130,7 +1131,7 @@ Screens:
                                           Update: =Value(DataCardValue9.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =4
+                                          Y: =6
                                         Children:
                                           - DataCardKey9:
                                               Control: Label@2.5.1
@@ -1215,7 +1216,7 @@ Screens:
                                           Update: =Value(DataCardValue10.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =4
+                                          Y: =6
                                         Children:
                                           - DataCardKey10:
                                               Control: Label@2.5.1
@@ -1300,7 +1301,7 @@ Screens:
                                           Update: =Value(DataCardValue11.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =5
+                                          Y: =7
                                         Children:
                                           - DataCardKey11:
                                               Control: Label@2.5.1
@@ -1385,7 +1386,7 @@ Screens:
                                           Update: =Value(DataCardValue12.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =5
+                                          Y: =7
                                         Children:
                                           - DataCardKey12:
                                               Control: Label@2.5.1
@@ -1471,7 +1472,7 @@ Screens:
                                           Update: =DataCardValue13.Text
                                           Width: =458
                                           X: =0
-                                          Y: =6
+                                          Y: =8
                                         Children:
                                           - DataCardKey13:
                                               Control: Label@2.5.1
@@ -1556,8 +1557,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue14.Text
                                           Width: =458
-                                          X: =1
-                                          Y: =6
+                                          X: =0
+                                          Y: =3
                                         Children:
                                           - DataCardKey14:
                                               Control: Label@2.5.1
@@ -1642,8 +1643,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue15.Text
                                           Width: =458
-                                          X: =0
-                                          Y: =7
+                                          X: =1
+                                          Y: =3
                                         Children:
                                           - DataCardKey15:
                                               Control: Label@2.5.1
@@ -1728,8 +1729,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue16.Text
                                           Width: =458
-                                          X: =1
-                                          Y: =7
+                                          X: =0
+                                          Y: =4
                                         Children:
                                           - DataCardKey16:
                                               Control: Label@2.5.1
@@ -1815,7 +1816,7 @@ Screens:
                                           Update: =DataCardValue17.Text
                                           Width: =458
                                           X: =0
-                                          Y: =8
+                                          Y: =9
                                         Children:
                                           - DataCardKey17:
                                               Control: Label@2.5.1
@@ -1900,7 +1901,7 @@ Screens:
                                           Update: =Value(DataCardValue18.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =8
+                                          Y: =9
                                         Children:
                                           - DataCardKey18:
                                               Control: Label@2.5.1
@@ -1985,7 +1986,7 @@ Screens:
                                           Update: =Value(DataCardValue19.Text)
                                           Width: =458
                                           X: =0
-                                          Y: =9
+                                          Y: =10
                                         Children:
                                           - DataCardKey19:
                                               Control: Label@2.5.1
@@ -2070,7 +2071,7 @@ Screens:
                                           Update: =Value(DataCardValue20.Text)
                                           Width: =458
                                           X: =1
-                                          Y: =9
+                                          Y: =10
                                         Children:
                                           - DataCardKey20:
                                               Control: Label@2.5.1
@@ -2155,8 +2156,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue21.Text
                                           Width: =458
-                                          X: =0
-                                          Y: =10
+                                          X: =1
+                                          Y: =4
                                         Children:
                                           - DataCardKey21:
                                               Control: Label@2.5.1
@@ -2241,8 +2242,8 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue22.Text
                                           Width: =458
-                                          X: =1
-                                          Y: =10
+                                          X: =0
+                                          Y: =11
                                         Children:
                                           - DataCardKey22:
                                               Control: Label@2.5.1
@@ -2326,7 +2327,7 @@ Screens:
                                           Required: =false
                                           Update: =DataCardValue23.Attachments
                                           Width: =458
-                                          X: =0
+                                          X: =1
                                           Y: =11
                                         Children:
                                           - DataCardKey23:
