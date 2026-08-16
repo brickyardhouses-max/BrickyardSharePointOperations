@@ -2,9 +2,28 @@
 
 ## Overview
 
-**Brickyard SharePoint Operations** is a Power Apps canvas application that serves as the operational interface for Brickyard Houses Home Solutions LLC. The app is the _interface only_. SharePoint Lists, SharePoint Documents, and OneDrive are the authoritative source of truth for all data and files.
+**Brickyard SharePoint Operations** is a Power Apps canvas app for office/admin operations.
 
-> **No Dataverse.** All project, client, scheduling, billing, and document data lives in SharePoint.
+This repository now follows an **incremental improvement** approach:
+- Improve the existing **Field Ops 2** app
+- Preserve existing **Projects-Tracker-Primary** usage
+- Preserve existing **SharePoint/OneDrive** file locations
+- Avoid rebuilds, clones, or replacement data systems unless explicitly approved
+
+> **No Dataverse replacement database.** SharePoint remains the source of truth.
+
+---
+
+## Current Direction
+
+The app is **not** being rebuilt into a new 10-screen replacement in this pass.
+
+Current focus is small, safe passes:
+1. Improve the existing selected project/client edit experience
+2. Improve document category visibility using current attachments/file links
+3. Add simple scheduling readiness indicators
+4. Improve billing/payment visibility from existing financial fields
+5. Add Copilot-assisted suggestions with human review
 
 ---
 
@@ -12,8 +31,8 @@
 
 ```
 BrickyardSharePointOperations/
-├── README.md                          ← This file
-├── docs/                              ← Planning and reference documentation
+├── README.md
+├── docs/
 │   ├── BRICKYARD-OPERATIONS-HUB-PLAN.md
 │   ├── BUILD-PHASES.md
 │   ├── SHAREPOINT-DATA-MODEL.md
@@ -21,12 +40,20 @@ BrickyardSharePointOperations/
 │   ├── APP-SCREEN-PLAN.md
 │   └── DO-NOT-EDIT-FILES.md
 └── FieldOps2/
-    └── BrickyardSharePointOperations/ ← Power Platform solution source
-        ├── canvasapps/
-        │   └── new_fieldops2_6938b/   ← Canvas app: "Field Ops 2"
-        ├── publishers/
-        └── solutions/
+    └── BrickyardSharePointOperations/
+        └── canvasapps/new_fieldops2_6938b/
 ```
+
+---
+
+## Rules for This Implementation Track
+
+1. Keep **Field Ops 2** working while improving it.
+2. Keep **Projects-Tracker-Primary** as the operational center.
+3. Keep existing Notes, Attachments, financial fields, and edit/save behavior.
+4. Do not create duplicate client/project/document storage.
+5. Do not create new lists/folders/flows/screens unless later approved.
+6. Power Apps is the interface; SharePoint/OneDrive is the file and data source of truth.
 
 ---
 
@@ -34,68 +61,9 @@ BrickyardSharePointOperations/
 
 | Document | Purpose |
 |---|---|
-| [BRICKYARD-OPERATIONS-HUB-PLAN.md](docs/BRICKYARD-OPERATIONS-HUB-PLAN.md) | Master plan, business rules, and architectural decisions |
-| [BUILD-PHASES.md](docs/BUILD-PHASES.md) | Ordered build sequence from Phase 0 through final publish |
-| [SHAREPOINT-DATA-MODEL.md](docs/SHAREPOINT-DATA-MODEL.md) | All SharePoint lists, columns, and document library structure |
-| [POWER-AUTOMATE-FLOWS.md](docs/POWER-AUTOMATE-FLOWS.md) | All Power Automate flows: triggers, actions, and document generation |
-| [APP-SCREEN-PLAN.md](docs/APP-SCREEN-PLAN.md) | All Power Apps screens, components, and navigation |
-| [DO-NOT-EDIT-FILES.md](docs/DO-NOT-EDIT-FILES.md) | Files that must not be hand-edited and why |
-
----
-
-## Current State (as of Build Pass 0)
-
-- **App name:** Field Ops 2 (`new_fieldops2_6938b`)
-- **SharePoint site:** `https://bhhomesolutions.sharepoint.com/sites/BrickyardHousesHomeSolutionsLLC`
-- **Active SharePoint list:** `Projects-Tracker-Primary`
-- **Architecture:** Single-screen record viewer and editor
-- **Build pass:** Pass 0 (documentation phase — no app source files modified)
-
----
-
-## Business Rules
-
-1. SharePoint Lists and SharePoint Documents are the **source of truth**.
-2. Power Apps is the **interface only**.
-3. **Do not use Dataverse** as the primary database.
-4. **Do not create duplicate client records.**
-5. **Do not create duplicate project records.**
-6. **Do not create duplicate document storage.** Documents live once in their SharePoint project folder.
-7. Client-facing documents (warranty, maintenance) must **not expose** cost, revenue, profit, margin, labor, or material data.
-8. Copilot reads uploaded documents, extracts data, updates trackers, and assists with document generation. Manual corrections must always remain possible.
-
----
-
-## Project Workflow
-
-```
-Pending Bid → Won → Awaiting Contract → Awaiting NOA → Ready For Scheduling
-→ Scheduled → Active → Awaiting Completion Signoff → Ready To Bill
-→ Awaiting Payment → Paid → Warranty → Closed
-```
-
----
-
-## Scheduling Rules
-
-- **Missing Contract** or **missing NOA** can block scheduling when those documents are required.
-- **Consent To Start does NOT block scheduling.** It is a warning/informational flag only.
-- A scheduling override request may be submitted. Overrides must record: Requested By, Reason, Approval Status, and Approval Date.
-
----
-
-## Getting Started (Maker)
-
-1. Open [Power Apps Studio](https://make.powerapps.com)
-2. Navigate to the **BrickyardSharePointOperations** solution
-3. Open the **Field Ops 2** canvas app
-4. All SharePoint list connections are under the SharePoint connector pointed at `bhhomesolutions.sharepoint.com/sites/BrickyardHousesHomeSolutionsLLC`
-5. See [BUILD-PHASES.md](docs/BUILD-PHASES.md) before making any changes to app source
-
----
-
-## Contributing
-
-Before editing any file in the `FieldOps2/` directory, read [DO-NOT-EDIT-FILES.md](docs/DO-NOT-EDIT-FILES.md).
-
-All app changes must be made in Power Apps Studio, then exported and committed via the Azure DevOps pipeline. Do not hand-edit Power Apps YAML source files except for minor property corrections as noted in the canvas apps YAML warning header.
+| [BRICKYARD-OPERATIONS-HUB-PLAN.md](docs/BRICKYARD-OPERATIONS-HUB-PLAN.md) | Master strategy (improve existing app, no rebuild) |
+| [BUILD-PHASES.md](docs/BUILD-PHASES.md) | Small-pass sequence |
+| [APP-SCREEN-PLAN.md](docs/APP-SCREEN-PLAN.md) | Existing-screen-first UI improvements |
+| [SHAREPOINT-DATA-MODEL.md](docs/SHAREPOINT-DATA-MODEL.md) | Current tracker-centric data model |
+| [POWER-AUTOMATE-FLOWS.md](docs/POWER-AUTOMATE-FLOWS.md) | Flow usage approach for incremental rollout |
+| [DO-NOT-EDIT-FILES.md](docs/DO-NOT-EDIT-FILES.md) | Protected files and editing rules |
