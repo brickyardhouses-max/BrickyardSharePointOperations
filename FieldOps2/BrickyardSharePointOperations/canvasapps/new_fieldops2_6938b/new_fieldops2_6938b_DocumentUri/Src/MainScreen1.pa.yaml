@@ -113,7 +113,7 @@ Screens:
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     BorderStyle: =BorderStyle.None
                                     BorderThickness: =1
-                                    Color: =RGBA(70, 68, 64, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     Default: =""
                                     DisabledBorderColor: =ColorFade(Self.BorderColor, 40%)
                                     DisabledColor: =ColorFade(Self.Color, 40%)
@@ -134,7 +134,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(0, 0, 0, 1)
-                                    Color: =RGBA(164, 38, 44, 1)
+                                    Color: =RGBA(96, 94, 92, 1)
                                     DisabledBorderColor: =RGBA(56, 56, 56, 1)
                                     DisabledColor: =RGBA(119, 119, 119, 1)
                                     Height: =44
@@ -163,7 +163,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(164, 38, 44, 1)
                                     Height: =44
                                     Icon: =Icon.Add
                                     OnSelect: |-
@@ -177,6 +177,7 @@ Screens:
                                   Control: Label@2.5.1
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     FillPortions: =1
                                     Font: =Font.'Open Sans'
                                     Height: =44
@@ -185,16 +186,19 @@ Screens:
                             Control: Classic/Button@2.2.0
                             Properties:
                               AlignInContainer: =AlignInContainer.Stretch
-                              BorderColor: =RGBA(89, 0, 0, 1)
-                              Color: =RGBA(255, 255, 255, 1)
-                              Fill: =RGBA(89, 0, 0, 1)
+                              BorderColor: =RGBA(200, 198, 196, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
                               FillPortions: =0
                               Font: =Font.'Open Sans'
-                              Height: =36
-                              HoverFill: =RGBA(120, 0, 0, 1)
+                              Height: =32
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(243, 242, 241, 1)
                               LayoutMinWidth: =120
                               OnSelect: |-
                                 =UpdateContext({ sortMode: If(sortMode >= 3, 1, sortMode + 1) })
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(237, 235, 233, 1)
                               Size: =12
                               Text: |-
                                 ="Sort: " & Switch(sortMode, 2, "Stage", 3, "Owed", "Newest")
@@ -204,15 +208,15 @@ Screens:
                             Control: Classic/Button@2.2.0
                             Properties:
                               AlignInContainer: =AlignInContainer.Stretch
-                              BorderColor: =RGBA(89, 0, 0, 1)
-                              Color: |-
-                                =If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(89, 0, 0, 1))
-                              Fill: |-
-                                =If(needsAttentionOnly, RGBA(164, 38, 44, 1), RGBA(255, 255, 255, 1))
+                              BorderColor: =RGBA(200, 198, 196, 1)
+                              Color: =If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(50, 49, 48, 1))
+                              Fill: =If(needsAttentionOnly, RGBA(164, 38, 44, 1), RGBA(255, 255, 255, 1))
                               FillPortions: =0
                               Font: =Font.'Open Sans'
-                              Height: =36
-                              HoverFill: =RGBA(222, 179, 184, 1)
+                              Height: =32
+                              HoverColor: =If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(50, 49, 48, 1))
+                              HoverFill: |-
+                                =If(needsAttentionOnly, ColorFade(RGBA(164, 38, 44, 1), -20%), RGBA(243, 242, 241, 1))
                               LayoutMinWidth: =120
                               OnSelect: |-
                                 =UpdateContext({ needsAttentionOnly: Not(needsAttentionOnly) })
@@ -225,7 +229,7 @@ Screens:
                             Properties:
                               AlignInContainer: =AlignInContainer.Stretch
                               BorderColor: =RGBA(89, 0, 0, 1)
-                              Color: =RGBA(70, 68, 64, 1)
+                              Color: =RGBA(96, 94, 92, 1)
                               FillPortions: =0
                               Font: =Font.'Open Sans'
                               Height: =24
@@ -240,7 +244,7 @@ Screens:
                             Properties:
                               AlignInContainer: =AlignInContainer.Stretch
                               BorderColor: =RGBA(89, 0, 0, 1)
-                              Fill: =RGBA(164, 38, 44, 1)
+                              Fill: =RGBA(237, 235, 233, 1)
                               Height: =1
                               LayoutMinWidth: =200
                         - RecordsGallery1:
@@ -249,14 +253,14 @@ Screens:
                             Properties:
                               BorderColor: =RGBA(89, 0, 0, 1)
                               Default: =CurrentItem
-                              Fill: =RGBA(250, 250, 250, 1)
+                              Fill: =RGBA(255, 255, 255, 1)
                               Items: |-
                                 =With({ base: Filter(Search([@'Projects-Tracker-Primary'], SearchInput1.Text, Title, 'Site Address', 'Agency/Insurer'), Or(Not(needsAttentionOnly), IsBlank(Trim(Status)), And(Not(IsBlank(Trim('Agency/Insurer'))), IsBlank(Trim('NOA Received'))), 'Currently Owed' > 0)) }, Switch(sortMode, 2, SortByColumns(base, "field_13", SortOrder.Ascending), 3, SortByColumns(base, "field_19", SortOrder.Descending), SortByColumns(base, "ID", SortOrder.Descending)))
                               LayoutMinWidth: =0
                               OnSelect: |-
                                 =UpdateContext({ itemSelected: true, CurrentItem: ThisItem })
-                              TemplateFill: =If(ThisItem.IsSelected, RGBA(230, 230, 230, 1), RGBA(0, 0, 0, 0))
-                              TemplateSize: =128
+                              TemplateFill: =If(ThisItem.IsSelected, RGBA(243, 242, 241, 1), RGBA(0, 0, 0, 0))
+                              TemplateSize: =108
                             Children:
                               - Title1:
                                   Control: Label@2.5.1
@@ -281,6 +285,7 @@ Screens:
                                   Control: Label@2.5.1
                                   Properties:
                                     BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(96, 94, 92, 1)
                                     Font: =Font.'Open Sans'
                                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                                     Height: =Self.Size * 1.8
@@ -299,6 +304,7 @@ Screens:
                                   Control: Label@2.5.1
                                   Properties:
                                     BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(96, 94, 92, 1)
                                     Font: =Font.'Open Sans'
                                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                                     Height: =Self.Size * 1.8
@@ -309,7 +315,7 @@ Screens:
                                     PaddingTop: =0
                                     Size: =12
                                     Text: |-
-                                      =If(IsBlank(ThisItem.Status), "No status", ThisItem.Status) & " | NOA: " & If(IsBlank(ThisItem.'NOA Received'), "-", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', " | Docs", "")
+                                      =If(IsBlank(ThisItem.Status), "No status", ThisItem.Status) & "  ·  NOA " & If(IsBlank(ThisItem.'NOA Received'), "—", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', "  ·  Docs", "")
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title1.Width
                                     X: =Title1.X
@@ -319,18 +325,18 @@ Screens:
                                   Properties:
                                     BorderColor: =RGBA(0, 0, 0, 1)
                                     Color: |-
-                                      =If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid")), IsBlank(Find("consent", Lower(ThisItem.Notes)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
+                                      =With({ cReq: And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), cOk: Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))), nReq: Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(ThisItem.Notes)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Or(Not(cReq), Not(consent)), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))
                                     Font: =Font.'Open Sans'
-                                    FontWeight: =FontWeight.Semibold
+                                    FontWeight: =FontWeight.Normal
                                     Height: =Self.Size * 1.8
                                     OnSelect: =Select(Parent)
                                     PaddingBottom: =0
                                     PaddingLeft: =12
                                     PaddingRight: =0
                                     PaddingTop: =0
-                                    Size: =12
+                                    Size: =11
                                     Text: |-
-                                      =If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), "Scheduling: Blocked" & If(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), Not(Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))))), " | Contract", "") & If(And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))), " | NOA", ""), If(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid")), "Scheduling: Bid stage", If(IsBlank(Find("consent", Lower(ThisItem.Notes))), "Scheduling: Ready (verify consent)", "Scheduling: Ready")))
+                                      =With({ cReq: And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> "Pending Bid"), cOk: Or(Trim(ThisItem.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(ThisItem.Notes))))), nReq: Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(ThisItem.Notes)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), "Blocked  ·  " & If(And(And(cReq, Not(cOk)), And(nReq, Not(nOk))), "Missing Contract and NOA", If(And(cReq, Not(cOk)), "Missing Contract", "Missing NOA")), If(Or(Not(cReq), Not(consent)), "Needs attention", "Ready")))
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Title1.Width
                                     X: =Title1.X
@@ -356,8 +362,8 @@ Screens:
                                   Control: Rectangle@2.3.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Fill: =RGBA(255, 255, 255, 1)
-                                    Height: =8
+                                    Fill: =RGBA(237, 235, 233, 1)
+                                    Height: =1
                                     OnSelect: =Select(Parent)
                                     Width: =Parent.TemplateWidth
                                     Y: =Parent.TemplateHeight - Self.Height
@@ -378,7 +384,7 @@ Screens:
                                   Control: Rectangle@2.3.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Fill: =RGBA(89, 0, 0, 1)
+                                    Fill: =RGBA(164, 38, 44, 1)
                                     Height: =Parent.TemplateHeight - Separator1.Height
                                     OnSelect: =Select(Parent)
                                     Visible: =ThisItem.IsSelected
@@ -418,7 +424,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     Height: =50
                                     Icon: =Icon.ChevronLeft
                                     OnSelect: |-
@@ -435,23 +441,27 @@ Screens:
                                   Properties:
                                     AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     FillPortions: =1
                                     Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Semibold
+                                    Size: =16
                                     Text: =RecordsGallery1.Selected.'Title'
                               - StageChipLabel1:
                                   Control: Label@2.5.1
                                   Properties:
                                     Align: =Align.Center
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(255, 255, 255, 1)
+                                    Color: |-
+                                      =If(Trim(RecordsGallery1.Selected.Status) in ["Paid", "Warranty", "Closed"], RGBA(16, 124, 16, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready To Bill", "Awaiting Payment", "Billed"], RGBA(164, 38, 44, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(96, 94, 92, 1), RGBA(176, 120, 0, 1)))))
                                     Fill: |-
-                                      =If(Trim(RecordsGallery1.Selected.Status) in ["Paid", "Warranty", "Closed"], RGBA(16, 124, 16, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready To Bill", "Awaiting Payment", "Billed"], RGBA(164, 38, 44, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(166, 166, 166, 1), RGBA(176, 120, 0, 1)))))
+                                      =If(Trim(RecordsGallery1.Selected.Status) in ["Paid", "Warranty", "Closed"], RGBA(223, 246, 221, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready To Bill", "Awaiting Payment", "Billed"], RGBA(253, 231, 233, 1), If(Trim(RecordsGallery1.Selected.Status) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff"], RGBA(222, 236, 249, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(237, 235, 233, 1), RGBA(255, 244, 206, 1)))))
                                     FillPortions: =0
                                     Font: =Font.'Open Sans'
                                     FontWeight: =FontWeight.Semibold
-                                    Height: =28
+                                    Height: =24
                                     LayoutMinWidth: =150
-                                    Size: =12
+                                    Size: =11
                                     Text: |-
                                       =If(IsBlank(Trim(RecordsGallery1.Selected.Status)), "No stage set", Trim(RecordsGallery1.Selected.Status))
                                     Tooltip: ="Current pipeline stage for this project"
@@ -463,15 +473,16 @@ Screens:
                                   Control: Label@2.5.1
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =If(RecordsGallery1.Selected.'Has attachments', RGBA(16, 124, 16, 1), RGBA(166, 166, 166, 1))
+                                    Color: |-
+                                      =If(RecordsGallery1.Selected.'Has attachments', RGBA(16, 124, 16, 1), RGBA(96, 94, 92, 1))
                                     FillPortions: =0
                                     Font: =Font.'Open Sans'
                                     FontWeight: =FontWeight.Semibold
                                     Height: =50
                                     LayoutMinWidth: =120
-                                    Size: =12
+                                    Size: =11
                                     Text: |-
-                                      =If(RecordsGallery1.Selected.'Has attachments', "Docs attached", "No docs")
+                                      =If(RecordsGallery1.Selected.'Has attachments', "Docs attached", "No docs attached")
                                     Tooltip: ="Documents for this project are listed in the Attachments section of the form."
                                     VerticalAlign: =VerticalAlign.Middle
                                     Visible: =!newMode
@@ -481,7 +492,7 @@ Screens:
                                   Properties:
                                     AccessibleLabel: =Self.Tooltip
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     DisplayMode: |-
                                       =If(IsBlank(Trim(RecordsGallery1.Selected.Title)), DisplayMode.Disabled, DisplayMode.Edit)
                                     Height: =50
@@ -500,7 +511,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     Height: =50
                                     Icon: =Icon.Check
                                     OnSelect: =SubmitForm(Form1)
@@ -515,7 +526,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     Height: =50
                                     Icon: =Icon.Cancel
                                     OnSelect: |-
@@ -531,7 +542,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     Height: =50
                                     Icon: =Icon.Edit
                                     OnSelect: |-
@@ -547,7 +558,7 @@ Screens:
                                   Control: Classic/Icon@2.5.0
                                   Properties:
                                     BorderColor: =RGBA(89, 0, 0, 1)
-                                    Color: =RGBA(89, 0, 0, 1)
+                                    Color: =RGBA(164, 38, 44, 1)
                                     Height: =50
                                     Icon: =Icon.Trash
                                     OnSelect: |-
@@ -571,7 +582,7 @@ Screens:
                                   Variant: Classic
                                   Layout: Vertical
                                   Properties:
-                                    BorderColor: =RGBA(89, 0, 0, 1)
+                                    BorderColor: =RGBA(200, 198, 196, 1)
                                     DataSource: =[@'Projects-Tracker-Primary']
                                     DefaultMode: =If(newMode, FormMode.New, editMode, FormMode.Edit, FormMode.View)
                                     Item: =RecordsGallery1.Selected
@@ -586,11 +597,11 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="Title"
                                           Default: =ThisItem.Title
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'Title')
-                                          Height: =ErrorMessage1.Y + ErrorMessage1.Height + 26
+                                          Height: =ErrorMessage1.Y + ErrorMessage1.Height + 18
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'Title')
                                           Required: =false
                                           Update: =DataCardValue1.Text
@@ -602,12 +613,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Client & Site"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -620,7 +631,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -637,8 +648,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -689,7 +700,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_1"
                                           Default: =ThisItem.'Site Address'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_1')
@@ -706,7 +717,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -723,8 +734,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -775,7 +786,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_2"
                                           Default: =ThisItem.'Agency/Insurer'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_2')
@@ -792,7 +803,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -809,8 +820,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -861,7 +872,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_3"
                                           Default: =ThisItem.'Case Manager'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_3')
@@ -878,7 +889,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -895,8 +906,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -947,7 +958,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_4"
                                           Default: =ThisItem.'Case Mgr Email'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_4')
@@ -964,7 +975,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -981,8 +992,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -1033,7 +1044,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_5"
                                           Default: =ThisItem.'Project Type'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_5')
@@ -1050,7 +1061,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1067,8 +1078,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -1119,11 +1130,11 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_6"
                                           Default: =ThisItem.'Bid Amount'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_6')
-                                          Height: =ErrorMessage7.Y + ErrorMessage7.Height + 26
+                                          Height: =ErrorMessage7.Y + ErrorMessage7.Height + 18
                                           Required: =false
                                           Update: =Value(DataCardValue7.Text)
                                           Width: =458
@@ -1134,12 +1145,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Financials"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -1152,7 +1163,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1170,8 +1181,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1221,7 +1232,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_7"
                                           Default: =ThisItem.'Labor Cost'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_7')
@@ -1237,7 +1248,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1255,8 +1266,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1306,7 +1317,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_8"
                                           Default: =ThisItem.'Materials Cost'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_8')
@@ -1322,7 +1333,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1340,8 +1351,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1391,7 +1402,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_9"
                                           Default: =ThisItem.'Other Cost'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_9')
@@ -1407,7 +1418,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1425,8 +1436,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1476,7 +1487,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_10"
                                           Default: =ThisItem.'Total Expenses'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_10')
@@ -1493,7 +1504,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1512,8 +1523,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1563,7 +1574,7 @@ Screens:
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - (Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))
+                                                  =With({ calc: Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
                                                 Font: =Font.'Open Sans'
                                                 Height: =22
                                                 PaddingBottom: =0
@@ -1572,7 +1583,7 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - (Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0))) > 0.005, "Calculated total expenses: " & Text(Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0), "[$-en-US]$#,##0.00") & " - entered value kept, press Use Calculated Totals to apply", "Calculated total expenses: " & Text(Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0), "[$-en-US]$#,##0.00") & " - matches")
+                                                  =With({ calc: Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0) }, "Calculated total expenses " & Text(calc, "[$-en-US]$#,##0.00") & If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - calc) > 0.005, "  ·  differs from the entered value", " ✓"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -1580,22 +1591,22 @@ Screens:
                                           - UseCalculatedTotalsButton1:
                                               Control: Classic/Button@2.2.0
                                               Properties:
-                                                BorderColor: =ColorFade(Self.Fill, -15%)
-                                                Color: =RGBA(255, 255, 255, 1)
+                                                BorderColor: =RGBA(200, 198, 196, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                                 DisplayMode: |-
                                                   =If(Or(editMode, newMode), DisplayMode.Edit, DisplayMode.Disabled)
-                                                Fill: =RGBA(164, 38, 44, 1)
+                                                Fill: =RGBA(255, 255, 255, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =36
+                                                Height: =32
                                                 HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
-                                                HoverColor: =RGBA(255, 255, 255, 1)
-                                                HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -20%)
+                                                HoverColor: =RGBA(50, 49, 48, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 OnSelect: |-
                                                   =UpdateContext({ useCalcTotals: true }); Reset(DataCardValue11); Reset(DataCardValue12); Reset(DataCardValue13); Reset(DataCardValue20); Notify("Totals recalculated from labor, materials, other cost, bid and billing amounts.", NotificationType.Information, 3000)
                                                 PressedBorderColor: =Self.Fill
-                                                PressedColor: =Self.Fill
-                                                PressedFill: =Self.Color
+                                                PressedColor: =RGBA(50, 49, 48, 1)
+                                                PressedFill: =RGBA(237, 235, 233, 1)
                                                 Size: =11
                                                 Text: ="Use Calculated Totals"
                                                 Tooltip: ="Overwrite the roll-up fields with the calculated values"
@@ -1607,7 +1618,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_11"
                                           Default: =ThisItem.Profit
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_11')
@@ -1624,7 +1635,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1643,8 +1654,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -1694,7 +1705,7 @@ Screens:
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - (Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))
+                                                  =With({ calc: Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
                                                 Font: =Font.'Open Sans'
                                                 Height: =22
                                                 PaddingBottom: =0
@@ -1703,7 +1714,7 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - (Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0))) > 0.005, "Calculated profit: " & Text(Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0), "[$-en-US]$#,##0.00") & " - entered value kept, press Use Calculated Totals to apply", "Calculated profit: " & Text(Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0), "[$-en-US]$#,##0.00") & " - matches")
+                                                  =With({ calc: Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0) }, "Calculated profit " & Text(calc, "[$-en-US]$#,##0.00") & If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - calc) > 0.005, "  ·  differs from the entered value", " ✓"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -1713,7 +1724,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_12"
                                           Default: =ThisItem.'Margin %'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_12')
@@ -1731,7 +1742,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1749,8 +1760,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -1801,7 +1812,7 @@ Screens:
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Trim(DataCardValue13.Text) <> If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a"), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))
+                                                  =With({ calc: If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a") }, If(Trim(DataCardValue13.Text) <> calc, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
                                                 Font: =Font.'Open Sans'
                                                 Height: =22
                                                 PaddingBottom: =0
@@ -1810,7 +1821,7 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Trim(DataCardValue13.Text) <> If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a"), "Calculated margin: " & If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a") & " - entered value kept, press Use Calculated Totals to apply", "Calculated margin: " & If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a") & " - matches")
+                                                  =With({ calc: If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), "0.0%"), "n/a") }, "Calculated margin " & calc & If(Trim(DataCardValue13.Text) <> calc, "  ·  differs from the entered value", " ✓"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -1820,7 +1831,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_13"
                                           Default: =ThisItem.Status
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_13')
@@ -1836,12 +1847,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Workflow"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -1854,7 +1865,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -1872,8 +1883,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -1922,56 +1933,57 @@ Screens:
                                           - StatusValuesGuidance1:
                                               Control: Label@2.5.1
                                               Properties:
-                                                AutoHeight: =true
+                                                AutoHeight: =false
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =40
+                                                Height: =If(Or(editMode, newMode), 36, 0)
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  ="Pipeline: Pre-Estimate • Pending Bid • Awaiting NOA • Ready For Scheduling • Scheduled • Active • Awaiting Signoff • Ready To Bill • Awaiting Payment • Paid • Warranty • Closed"
+                                                  ="Stages: Pre-Estimate → Pending Bid → Awaiting NOA → Ready For Scheduling → Scheduled → Active → Awaiting Signoff → Ready To Bill → Awaiting Payment → Paid → Warranty → Closed"
+                                                Visible: =Or(editMode, newMode)
                                                 Width: =Parent.Width - 60
                                                 Wrap: =true
                                                 X: =30
-                                                Y: =DataCardValue14.Y + DataCardValue14.Height + 20
+                                                Y: =DataCardValue14.Y + DataCardValue14.Height + 10
                                           - StageProgressIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =24
+                                                Height: =22
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =12
                                                 Text: |-
-                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "Stage: not set - pick a stage from the list below", "Stage " & Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) & " of 12: " & Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"))
+                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "Stage not set", "Stage " & Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) & " of 12  ·  " & Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 8
+                                                Y: =StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 6
                                           - StageValidationIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: |-
-                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, RGBA(164, 38, 44, 1), If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1)))
+                                                Color: =RGBA(176, 120, 0, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =22
+                                                Height: |-
+                                                  =If(And(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) <> 0, Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set")), 0, 20)
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "This value is not on the standard pipeline - use Advance Stage to move it onto the list", If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set"), "Standard pipeline value", "Legacy value - advancing moves it to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate")))
+                                                  =If(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) = 0, "Not a standard pipeline value", If(And(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) <> 0, Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Not set")), "", "Legacy value  ·  moves to Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") next"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -1980,56 +1992,57 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =26
+                                                Height: =22
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =12
-                                                Text: ="Scheduling Readiness"
+                                                Text: ="Scheduling readiness"
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =StageValidationIndicator1.Y + StageValidationIndicator1.Height + 10
+                                                Y: |-
+                                                  =StageValidationIndicator1.Y + StageValidationIndicator1.Height + 12
                                           - ContractStatusIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), RGBA(176, 120, 0, 1), If(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Not(cReq), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Semibold
-                                                Height: =22
+                                                FontWeight: =FontWeight.Normal
+                                                Height: =20
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), "Contract Status: Not required yet (bid stage)", If(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), "Contract Status: On file", "Contract Status: Missing - blocks scheduling"))
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), If(And(And(cReq, Not(cOk)), And(nReq, Not(nOk))), "Missing Contract and NOA", If(And(cReq, Not(cOk)), "Missing Contract", "Missing NOA")), If(Not(cReq), "Contract not required at bid stage", "Contract and NOA requirements met")))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =SchedulingReadinessHeader1.Y + SchedulingReadinessHeader1.Height
+                                                Y: |-
+                                                  =SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 6
                                           - NOAStatusIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: |-
-                                                  =If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), RGBA(176, 120, 0, 1), If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Semibold
-                                                Height: =22
+                                                FontWeight: =FontWeight.Normal
+                                                Height: =20
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), "NOA Status: Not required", If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), "NOA Status: Received", "NOA Status: Missing - blocks scheduling"))
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, "Contract: " & If(Not(cReq), "Not required yet", If(cOk, "On file", "Missing")) & "  ·  " & "NOA: " & If(Not(nReq), "Not required", If(nOk, "Received", "Missing")))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -2038,17 +2051,17 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: |-
-                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1))
+                                                Color: =RGBA(176, 120, 0, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =22
+                                                Height: |-
+                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), 0, 20)
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), "Consent To Start: Noted (warning only)", "Consent To Start: Not noted (warning only - does not block scheduling)")
+                                                  =If(Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))), "", "Consent To Start not noted  ·  warning only, does not block scheduling")
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -2056,23 +2069,30 @@ Screens:
                                           - SchedulingReadinessIndicator1:
                                               Control: Label@2.5.1
                                               Properties:
+                                                Align: =Align.Center
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), IsBlank(Find("consent", Lower(DataCardValue22.Text)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Or(Not(cReq), Not(consent)), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))
+                                                Fill: |-
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(253, 231, 233, 1), If(Or(Not(cReq), Not(consent)), RGBA(255, 244, 206, 1), RGBA(223, 246, 221, 1))))
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =26
+                                                Height: =24
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
-                                                Size: =12
+                                                Size: =11
                                                 Text: |-
-                                                  =If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), "Scheduling Readiness: BLOCKED", If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid")), "Scheduling Readiness: Needs attention (bid stage)", If(IsBlank(Find("consent", Lower(DataCardValue22.Text))), "Scheduling Readiness: Ready (verify Consent To Start)", "Scheduling Readiness: Ready")))
-                                                Width: =Parent.Width - 60
+                                                  =With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> "Pending Bid"), cOk: Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])), consent: Not(IsBlank(Find("consent", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), "Blocked", If(Or(Not(cReq), Not(consent)), "Needs Attention", "Ready")))
+                                                Tooltip: |-
+                                                  ="Only a missing Contract or NOA can block scheduling. Consent To Start is a warning only."
+                                                VerticalAlign: =VerticalAlign.Middle
+                                                Width: =150
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 6
+                                                Y: |-
+                                                  =SchedulingReadinessHeader1.Y + SchedulingReadinessHeader1.Height + 2
                                           - AdvanceStageButton1:
                                               Control: Classic/Button@2.2.0
                                               Properties:
@@ -2083,53 +2103,53 @@ Screens:
                                                   =If(And(Or(editMode, newMode), Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) < 12), DisplayMode.Edit, DisplayMode.Disabled)
                                                 Fill: =RGBA(164, 38, 44, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =36
+                                                Height: =32
                                                 HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                                                 HoverColor: =RGBA(255, 255, 255, 1)
                                                 HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -20%)
                                                 OnSelect: |-
-                                                  =If(And(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1 >= 4, Or(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))))), Notify("Cannot advance to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ": " & If(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), "contract is not on file. ", "") & If(Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))), "NOA has not been received.", ""), NotificationType.Error, 4000), UpdateContext({ stageOverride: Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") }); Reset(DataCardValue14); Notify("Stage set to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ". Save the record to apply it.", NotificationType.Success, 3000))
+                                                  =If(And(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1 >= 4, Or(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"])))))), Notify("Cannot advance to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & "  ·  " & If(And(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = "Awaiting NOA")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in ["No", "N", "Pending", "Not Received", "NA", "N/A", "-", "None"]))))), "Missing Contract and NOA", If(Not(Or(Trim(DataCardValue14.Text) in ["Ready For Scheduling", "Scheduled", "Active", "Awaiting Signoff", "Ready To Bill", "Awaiting Payment", "Paid", "Warranty", "Closed"], Not(IsBlank(Find("contract", Lower(DataCardValue22.Text)))))), "Missing Contract", "Missing NOA")), NotificationType.Error, 4000), UpdateContext({ stageOverride: Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") }); Reset(DataCardValue14); Notify("Stage set to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ". Save the record to apply it.", NotificationType.Success, 3000))
                                                 PressedBorderColor: =Self.Fill
                                                 PressedColor: =Self.Fill
                                                 PressedFill: =Self.Color
                                                 Size: =11
                                                 Text: |-
-                                                  ="Advance Stage to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate")
+                                                  ="Advance to " & Switch(Min(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) + 1, 12), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate")
                                                 Tooltip: ="Move this project to the next stage once its readiness checks pass"
-                                                Width: =260
+                                                Width: =240
                                                 X: =30
-                                                Y: =SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 10
+                                                Y: =ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 12
                                           - PreviousStageButton1:
                                               Control: Classic/Button@2.2.0
                                               Properties:
-                                                BorderColor: =ColorFade(Self.Fill, -15%)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                BorderColor: =RGBA(200, 198, 196, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                                 DisplayMode: |-
                                                   =If(And(Or(editMode, newMode), Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) > 1), DisplayMode.Edit, DisplayMode.Disabled)
                                                 Fill: =RGBA(255, 255, 255, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =36
+                                                Height: =32
                                                 HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
-                                                HoverColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverColor: =RGBA(50, 49, 48, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 OnSelect: |-
                                                   =UpdateContext({ stageOverride: Switch(Max(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) - 1, 1), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") }); Reset(DataCardValue14); Notify("Stage moved back to " & Switch(Max(Switch(Trim(DataCardValue14.Text), "Pre-Estimate", 1, "Pending Bid", 2, "Awaiting NOA", 3, "Ready For Scheduling", 4, "Scheduled", 5, "Active", 6, "Awaiting Signoff", 7, "Ready To Bill", 8, "Awaiting Payment", 9, "Paid", 10, "Warranty", 11, "Closed", 12, "Won", 2, "Awaiting Contract", 2, "Pre Estimate", 1, 0) - 1, 1), 1, "Pre-Estimate", 2, "Pending Bid", 3, "Awaiting NOA", 4, "Ready For Scheduling", 5, "Scheduled", 6, "Active", 7, "Awaiting Signoff", 8, "Ready To Bill", 9, "Awaiting Payment", 10, "Paid", 11, "Warranty", 12, "Closed", "Pre-Estimate") & ". Save the record to apply it.", NotificationType.Information, 3000)
                                                 PressedBorderColor: =Self.Fill
-                                                PressedColor: =Self.Fill
-                                                PressedFill: =RGBA(222, 179, 184, 1)
+                                                PressedColor: =RGBA(50, 49, 48, 1)
+                                                PressedFill: =RGBA(237, 235, 233, 1)
                                                 Size: =11
-                                                Text: ="Step Back"
+                                                Text: ="Step back"
                                                 Tooltip: ="Move this project back one stage"
-                                                Width: =120
-                                                X: =300
+                                                Width: =110
+                                                X: =282
                                                 Y: =AdvanceStageButton1.Y
                                     - NOA Received_DataCard1:
                                         Control: TypedDataCard@1.0.7
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_14"
                                           Default: =ThisItem.'NOA Received'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_14')
@@ -2146,7 +2166,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2164,8 +2184,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -2216,7 +2236,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_15"
                                           Default: =ThisItem.'Completion Date'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_15')
@@ -2233,7 +2253,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2250,8 +2270,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -2302,11 +2322,11 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_16"
                                           Default: =ThisItem.Billed
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_16')
-                                          Height: =ErrorMessage17.Y + ErrorMessage17.Height + 26
+                                          Height: =ErrorMessage17.Y + ErrorMessage17.Height + 18
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_16')
                                           Required: =false
                                           Update: =DataCardValue17.Text
@@ -2318,12 +2338,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Billing & Payment"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -2336,7 +2356,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2354,8 +2374,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -2406,7 +2426,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_17"
                                           Default: =ThisItem.'Amount Billed'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_17')
@@ -2422,7 +2442,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2440,8 +2460,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -2491,7 +2511,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_18"
                                           Default: =ThisItem.'Paid to Date'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_18')
@@ -2507,7 +2527,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2525,8 +2545,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -2576,7 +2596,7 @@ Screens:
                                         Variant: ClassicNumberEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_19"
                                           Default: =ThisItem.'Currently Owed'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_19')
@@ -2593,7 +2613,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2612,8 +2632,8 @@ Screens:
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
                                                 Format: =TextFormat.Number
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
                                                 RadiusBottomRight: =0
@@ -2663,7 +2683,7 @@ Screens:
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - (Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))
+                                                  =With({ calc: Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))
                                                 Font: =Font.'Open Sans'
                                                 Height: =22
                                                 PaddingBottom: =0
@@ -2672,7 +2692,7 @@ Screens:
                                                 PaddingTop: =0
                                                 Size: =11
                                                 Text: |-
-                                                  =If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - (Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0))) > 0.005, "Calculated balance owed: " & Text(Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0), "[$-en-US]$#,##0.00") & " - entered value kept, press Use Calculated Totals to apply", "Calculated balance owed: " & Text(Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0), "[$-en-US]$#,##0.00") & " - matches")
+                                                  =With({ calc: Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0) }, "Calculated balance owed " & Text(calc, "[$-en-US]$#,##0.00") & If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - calc) > 0.005, "  ·  differs from the entered value", " ✓"))
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -2682,7 +2702,7 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_20"
                                           Default: =ThisItem.'Change Order'
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_20')
@@ -2699,7 +2719,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2717,8 +2737,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -2769,11 +2789,11 @@ Screens:
                                         Variant: ClassicAttachmentsEdit
                                         IsLocked: false
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="{Attachments}"
                                           Default: =ThisItem.Attachments
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'{Attachments}')
-                                          Height: =DataCardValue23.Y + DataCardValue23.Height + 30
+                                          Height: =DataCardValue23.Y + DataCardValue23.Height + 20
                                           Required: =false
                                           Update: =DataCardValue23.Attachments
                                           Width: =458
@@ -2784,12 +2804,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Documents"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -2802,7 +2822,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -2814,16 +2834,16 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =24
+                                                Height: =22
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
-                                                Size: =12
-                                                Text: ="Documents to attach for this project"
+                                                Size: =11
+                                                Text: ="Document checklist"
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
@@ -2832,16 +2852,16 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Contract"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Contract"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
                                                 X: =30
                                                 Y: =DocumentGuidanceHeader1.Y + DocumentGuidanceHeader1.Height
@@ -2849,149 +2869,153 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• NOA"
-                                                Width: =Parent.Width - 60
+                                                Text: ="NOA"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
-                                                X: =30
-                                                Y: =DocumentGuidanceContract1.Y + DocumentGuidanceContract1.Height
+                                                X: =30 + (Parent.Width - 60) / 2
+                                                Y: =DocumentGuidanceContract1.Y
                                           - DocumentGuidanceConsentToStart1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Consent To Start"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Consent To Start"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =DocumentGuidanceNOA1.Y + DocumentGuidanceNOA1.Height
+                                                Y: =DocumentGuidanceContract1.Y + DocumentGuidanceContract1.Height
                                           - DocumentGuidanceCompletionSignoff1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Completion Signoff"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Completion Signoff"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
-                                                X: =30
-                                                Y: =DocumentGuidanceConsentToStart1.Y + DocumentGuidanceConsentToStart1.Height
+                                                X: =30 + (Parent.Width - 60) / 2
+                                                Y: =DocumentGuidanceConsentToStart1.Y
                                           - DocumentGuidanceChangeOrder1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Change Order"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Change Order"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =DocumentGuidanceCompletionSignoff1.Y + DocumentGuidanceCompletionSignoff1.Height
+                                                Y: |-
+                                                  =DocumentGuidanceConsentToStart1.Y + DocumentGuidanceConsentToStart1.Height
                                           - DocumentGuidanceWarranty1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Warranty"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Warranty"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
-                                                X: =30
-                                                Y: =DocumentGuidanceChangeOrder1.Y + DocumentGuidanceChangeOrder1.Height
+                                                X: =30 + (Parent.Width - 60) / 2
+                                                Y: =DocumentGuidanceChangeOrder1.Y
                                           - DocumentGuidanceMaintenanceGuide1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(70, 68, 64, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =20
+                                                Height: =18
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
                                                 Size: =11
-                                                Text: ="• Maintenance Guide"
-                                                Width: =Parent.Width - 60
+                                                Text: ="Maintenance Guide"
+                                                Width: =(Parent.Width - 60) / 2
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =DocumentGuidanceWarranty1.Y + DocumentGuidanceWarranty1.Height
+                                                Y: |-
+                                                  =DocumentGuidanceChangeOrder1.Y + DocumentGuidanceChangeOrder1.Height
                                           - AttachmentPresenceLabel1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1))
+                                                Color: |-
+                                                  =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), RGBA(16, 124, 16, 1), RGBA(96, 94, 92, 1))
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =26
+                                                Height: =22
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
-                                                Size: =12
+                                                Size: =11
                                                 Text: |-
-                                                  =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), "Documents on file: " & CountRows(Parent.Default) & " attached below", "No documents attached yet")
+                                                  =If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), "Docs attached", "No docs attached")
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =DocumentGuidanceMaintenanceGuide1.Y + DocumentGuidanceMaintenanceGuide1.Height + 6
+                                                Y: |-
+                                                  =DocumentGuidanceMaintenanceGuide1.Y + DocumentGuidanceMaintenanceGuide1.Height + 8
                                           - ProjectFolderHeader1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(96, 94, 92, 1)
                                                 Font: =Font.'Open Sans'
                                                 FontWeight: =FontWeight.Semibold
-                                                Height: =26
+                                                Height: =22
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
                                                 PaddingTop: =0
-                                                Size: =12
-                                                Text: ="Project Folder"
+                                                Size: =11
+                                                Text: ="Project folder"
                                                 Width: =Parent.Width - 60
                                                 Wrap: =false
                                                 X: =30
-                                                Y: =AttachmentPresenceLabel1.Y + AttachmentPresenceLabel1.Height + 10
+                                                Y: =AttachmentPresenceLabel1.Y + AttachmentPresenceLabel1.Height + 6
                                           - ProjectFolderPathLabel1:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
                                                 Color: |-
-                                                  =If(IsBlank(Trim(DataCardValue1.Text)), RGBA(176, 120, 0, 1), RGBA(70, 68, 64, 1))
+                                                  =If(IsBlank(Trim(DataCardValue1.Text)), RGBA(176, 120, 0, 1), RGBA(96, 94, 92, 1))
                                                 Font: =Font.'Open Sans'
-                                                Height: =22
+                                                Height: =20
                                                 PaddingBottom: =0
                                                 PaddingLeft: =0
                                                 PaddingRight: =0
@@ -3008,52 +3032,52 @@ Screens:
                                           - OpenProjectFolderButton1:
                                               Control: Classic/Button@2.2.0
                                               Properties:
-                                                BorderColor: =ColorFade(Self.Fill, -15%)
-                                                Color: =RGBA(255, 255, 255, 1)
+                                                BorderColor: =RGBA(200, 198, 196, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                                 DisplayMode: |-
                                                   =If(IsBlank(Trim(DataCardValue1.Text)), DisplayMode.Disabled, DisplayMode.Edit)
-                                                Fill: =RGBA(164, 38, 44, 1)
+                                                Fill: =RGBA(255, 255, 255, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =36
+                                                Height: =32
                                                 HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
-                                                HoverColor: =RGBA(255, 255, 255, 1)
-                                                HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -20%)
+                                                HoverColor: =RGBA(50, 49, 48, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 OnSelect: |-
                                                   =Launch("https://bhhomesolutions.sharepoint.com/sites/BrickyardHousesHomeSolutionsLLC/Shared Documents/Forms/AllItems.aspx?id=" & EncodeUrl("/sites/BrickyardHousesHomeSolutionsLLC/Shared Documents/Projects/" & Trim(DataCardValue1.Text)))
                                                 PressedBorderColor: =Self.Fill
-                                                PressedColor: =Self.Fill
-                                                PressedFill: =Self.Color
+                                                PressedColor: =RGBA(50, 49, 48, 1)
+                                                PressedFill: =RGBA(237, 235, 233, 1)
                                                 Size: =11
                                                 Text: ="Open Project Folder"
                                                 Tooltip: ="Open this project's document folder in SharePoint"
-                                                Width: =190
+                                                Width: =170
                                                 X: =30
                                                 Y: =ProjectFolderPathLabel1.Y + ProjectFolderPathLabel1.Height + 4
                                           - OpenRecordInSharePointButton1:
                                               Control: Classic/Button@2.2.0
                                               Properties:
-                                                BorderColor: =ColorFade(Self.Fill, -15%)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                BorderColor: =RGBA(200, 198, 196, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                                 DisplayMode: |-
                                                   =If(Or(newMode, IsBlank(RecordsGallery1.Selected)), DisplayMode.Disabled, DisplayMode.Edit)
                                                 Fill: =RGBA(255, 255, 255, 1)
                                                 Font: =Font.'Open Sans'
-                                                Height: =36
+                                                Height: =32
                                                 HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
-                                                HoverColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverColor: =RGBA(50, 49, 48, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 OnSelect: |-
                                                   =Launch("https://bhhomesolutions.sharepoint.com/sites/BrickyardHousesHomeSolutionsLLC/Lists/ProjectsTrackerPrimary/DispForm.aspx?ID=" & RecordsGallery1.Selected.ID)
                                                 PressedBorderColor: =Self.Fill
-                                                PressedColor: =Self.Fill
-                                                PressedFill: =RGBA(222, 179, 184, 1)
+                                                PressedColor: =RGBA(50, 49, 48, 1)
+                                                PressedFill: =RGBA(237, 235, 233, 1)
                                                 Size: =11
                                                 Text: ="Open List Item"
                                                 Tooltip: ="Open this project record in the SharePoint list"
                                                 Width: =150
-                                                X: =230
+                                                X: =210
                                                 Y: =OpenProjectFolderButton1.Y
                                           - DataCardValue23:
                                               Control: Attachments@2.3.0
@@ -3062,21 +3086,21 @@ Screens:
                                                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverFill: =RGBA(222, 179, 184, 1)
-                                                ItemColor: =RGBA(255, 255, 255, 1)
-                                                ItemFill: =RGBA(164, 38, 44, 1)
-                                                ItemHoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
+                                                ItemColor: =RGBA(50, 49, 48, 1)
+                                                ItemFill: =RGBA(243, 242, 241, 1)
+                                                ItemHoverFill: =RGBA(237, 235, 233, 1)
                                                 Items: =Parent.Default
                                                 PaddingBottom: =5
                                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                                 PaddingRight: =5
                                                 PaddingTop: =5
-                                                PressedColor: =RGBA(255, 255, 255, 1)
-                                                PressedFill: =RGBA(89, 0, 0, 1)
+                                                PressedColor: =RGBA(50, 49, 48, 1)
+                                                PressedFill: =RGBA(237, 235, 233, 1)
                                                 Tooltip: =Parent.DisplayName
                                                 Width: =Parent.Width - 60
                                                 X: =30
-                                                Y: =OpenProjectFolderButton1.Y + OpenProjectFolderButton1.Height + 12
+                                                Y: =OpenProjectFolderButton1.Y + OpenProjectFolderButton1.Height + 10
                                           - ErrorMessage23:
                                               Control: Label@2.5.1
                                               MetadataKey: ErrorMessage
@@ -3117,11 +3141,11 @@ Screens:
                                         Variant: ClassicTextualEdit
                                         IsLocked: true
                                         Properties:
-                                          BorderColor: =RGBA(89, 0, 0, 1)
+                                          BorderColor: =RGBA(200, 198, 196, 1)
                                           DataField: ="field_21"
                                           Default: =ThisItem.Notes
                                           DisplayName: =DataSourceInfo([@'Projects-Tracker-Primary'],DataSourceInfo.DisplayName,'field_21')
-                                          Height: =ErrorMessage22.Y + ErrorMessage22.Height + 26
+                                          Height: =ErrorMessage22.Y + ErrorMessage22.Height + 18
                                           MaxLength: =DataSourceInfo([@'Projects-Tracker-Primary'], DataSourceInfo.MaxLength, 'field_21')
                                           Required: =false
                                           Update: =DataCardValue22.Text
@@ -3133,12 +3157,12 @@ Screens:
                                               Control: Label@2.5.1
                                               Properties:
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
-                                                FontWeight: =FontWeight.Bold
+                                                FontWeight: =FontWeight.Semibold
                                                 Height: =26
                                                 PaddingLeft: =0
-                                                Size: =15
+                                                Size: =14
                                                 Text: ="Notes"
                                                 VerticalAlign: =VerticalAlign.Middle
                                                 Width: =Parent.Width - 60
@@ -3151,7 +3175,7 @@ Screens:
                                               Properties:
                                                 AutoHeight: =true
                                                 BorderColor: =RGBA(0, 0, 0, 1)
-                                                Color: =RGBA(89, 0, 0, 1)
+                                                Color: =RGBA(50, 49, 48, 1)
                                                 Font: =Font.'Open Sans'
                                                 Height: =34
                                                 Text: =Parent.DisplayName
@@ -3168,8 +3192,8 @@ Screens:
                                                 DelayOutput: =true
                                                 DisplayMode: =Parent.DisplayMode
                                                 Font: =Font.'Open Sans'
-                                                HoverBorderColor: =RGBA(89, 0, 0, 1)
-                                                HoverFill: =RGBA(222, 179, 184, 1)
+                                                HoverBorderColor: =RGBA(138, 136, 134, 1)
+                                                HoverFill: =RGBA(243, 242, 241, 1)
                                                 MaxLength: =Parent.MaxLength
                                                 PaddingLeft: =5
                                                 RadiusBottomLeft: =0
@@ -3230,6 +3254,7 @@ Screens:
                               Align: =Align.Center
                               AlignInContainer: =AlignInContainer.Stretch
                               BorderColor: =RGBA(89, 0, 0, 1)
+                              Color: =RGBA(50, 49, 48, 1)
                               FillPortions: =1
                               Font: =Font.'Open Sans'
                               Text: ="Are you sure you want to delete this record?"
@@ -3239,7 +3264,7 @@ Screens:
                               Align: =Align.Center
                               AlignInContainer: =AlignInContainer.Stretch
                               BorderColor: =RGBA(89, 0, 0, 1)
-                              Color: =RGBA(89, 0, 0, 1)
+                              Color: =RGBA(96, 94, 92, 1)
                               FillPortions: =0
                               Font: =Font.'Open Sans'
                               Height: =28
@@ -3276,19 +3301,19 @@ Screens:
                               - CancelDeleteButton1:
                                   Control: Classic/Button@2.2.0
                                   Properties:
-                                    BorderColor: =ColorFade(Self.Fill, -15%)
-                                    Color: =RGBA(255, 255, 255, 1)
+                                    BorderColor: =RGBA(200, 198, 196, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                    Fill: =RGBA(164, 38, 44, 1)
+                                    Fill: =RGBA(255, 255, 255, 1)
                                     Font: =Font.'Open Sans'
                                     HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
-                                    HoverColor: =RGBA(255, 255, 255, 1)
-                                    HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -20%)
+                                    HoverColor: =RGBA(50, 49, 48, 1)
+                                    HoverFill: =RGBA(243, 242, 241, 1)
                                     OnSelect: |-
                                       =Reset(DeleteReasonInput1); UpdateContext({ deleteMode: false, deleteCancelled: true })
                                     PressedBorderColor: =Self.Fill
-                                    PressedColor: =Self.Fill
-                                    PressedFill: =Self.Color
+                                    PressedColor: =RGBA(50, 49, 48, 1)
+                                    PressedFill: =RGBA(237, 235, 233, 1)
                                     Text: ="Cancel"
                               - ConfirmDeleteButton1:
                                   Control: Classic/Button@2.2.0
