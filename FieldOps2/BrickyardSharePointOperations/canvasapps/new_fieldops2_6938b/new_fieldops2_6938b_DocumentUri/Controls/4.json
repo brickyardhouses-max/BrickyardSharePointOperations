@@ -1767,7 +1767,7 @@
                       {
                         "Property": "Color",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(0, 0, 0, 1)",
+                        "InvariantScript": "RGBA(50, 49, 48, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -2424,7 +2424,7 @@
                           {
                             "Property": "BorderColor",
                             "Category": "Design",
-                            "InvariantScript": "ColorFade(Self.Fill, -15%)",
+                            "InvariantScript": "RGBA(200, 198, 196, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -2460,7 +2460,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(255, 255, 255, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -2472,13 +2472,13 @@
                           {
                             "Property": "PressedColor",
                             "Category": "Design",
-                            "InvariantScript": "Self.Fill",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
                             "Property": "HoverColor",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(255, 255, 255, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -2490,7 +2490,7 @@
                           {
                             "Property": "Fill",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(164, 38, 44, 1)",
+                            "InvariantScript": "RGBA(255, 255, 255, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -2502,13 +2502,13 @@
                           {
                             "Property": "PressedFill",
                             "Category": "Design",
-                            "InvariantScript": "Self.Color",
+                            "InvariantScript": "RGBA(237, 235, 233, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
                             "Property": "HoverFill",
                             "Category": "Design",
-                            "InvariantScript": "ColorFade(RGBA(164, 38, 44, 1), -20%)",
+                            "InvariantScript": "RGBA(243, 242, 241, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -3169,7 +3169,7 @@
                       {
                         "Property": "Color",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(89, 0, 0, 1)",
+                        "InvariantScript": "RGBA(96, 94, 92, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -4499,7 +4499,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(70, 68, 64, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -4750,7 +4750,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(164, 38, 44, 1)",
+                            "InvariantScript": "RGBA(96, 94, 92, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -5315,7 +5315,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(164, 38, 44, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -5629,7 +5629,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(0, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -5994,7 +5994,7 @@
                       {
                         "Property": "Fill",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(164, 38, 44, 1)",
+                        "InvariantScript": "RGBA(237, 235, 233, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -6217,7 +6217,7 @@
                       {
                         "Property": "TemplateSize",
                         "Category": "Design",
-                        "InvariantScript": "128",
+                        "InvariantScript": "108",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -6301,7 +6301,7 @@
                       {
                         "Property": "Fill",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(250, 250, 250, 1)",
+                        "InvariantScript": "RGBA(255, 255, 255, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -6432,7 +6432,7 @@
                           {
                             "Property": "TemplateFill",
                             "Category": "Design",
-                            "InvariantScript": "If(ThisItem.IsSelected, RGBA(230, 230, 230, 1), RGBA(0, 0, 0, 0))",
+                            "InvariantScript": "If(ThisItem.IsSelected, RGBA(243, 242, 241, 1), RGBA(0, 0, 0, 0))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -6484,7 +6484,7 @@
                           {
                             "Property": "Fill",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(164, 38, 44, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7203,7 +7203,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(0, 0, 0, 1)",
+                            "InvariantScript": "RGBA(96, 94, 92, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7468,7 +7468,7 @@
                           {
                             "Property": "Text",
                             "Category": "Data",
-                            "InvariantScript": "If(IsBlank(ThisItem.Status), \"No status\", ThisItem.Status) & \" | NOA: \" & If(IsBlank(ThisItem.'NOA Received'), \"-\", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', \" | Docs\", \"\")",
+                            "InvariantScript": "If(IsBlank(ThisItem.Status), \"No status\", ThisItem.Status) & \"  \u00b7  NOA \" & If(IsBlank(ThisItem.'NOA Received'), \"\u2014\", ThisItem.'NOA Received') & If(ThisItem.'Has attachments', \"  \u00b7  Docs\", \"\")",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7486,7 +7486,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(0, 0, 0, 1)",
+                            "InvariantScript": "RGBA(96, 94, 92, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7745,7 +7745,7 @@
                           {
                             "Property": "Fill",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(255, 255, 255, 1)",
+                            "InvariantScript": "RGBA(237, 235, 233, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7811,7 +7811,7 @@
                           {
                             "Property": "Height",
                             "Category": "Design",
-                            "InvariantScript": "8",
+                            "InvariantScript": "1",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7946,7 +7946,7 @@
                           {
                             "Property": "Text",
                             "Category": "Data",
-                            "InvariantScript": "If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\"), Not(Or(Trim(ThisItem.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = \"Awaiting NOA\"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"]))))), \"Scheduling: Blocked\" & If(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\"), Not(Or(Trim(ThisItem.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(ThisItem.Notes))))))), \" | Contract\", \"\") & If(And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = \"Awaiting NOA\"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])))), \" | NOA\", \"\"), If(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\")), \"Scheduling: Bid stage\", If(IsBlank(Find(\"consent\", Lower(ThisItem.Notes))), \"Scheduling: Ready (verify consent)\", \"Scheduling: Ready\")))",
+                            "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\"), cOk: Or(Trim(ThisItem.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(ThisItem.Notes))))), nReq: Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(ThisItem.Notes)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), \"Blocked  \u00b7  \" & If(And(And(cReq, Not(cOk)), And(nReq, Not(nOk))), \"Missing Contract and NOA\", If(And(cReq, Not(cOk)), \"Missing Contract\", \"Missing NOA\")), If(Or(Not(cReq), Not(consent)), \"Needs attention\", \"Ready\")))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -7964,7 +7964,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "If(Or(And(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\"), Not(Or(Trim(ThisItem.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(ThisItem.Notes))))))), And(Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = \"Awaiting NOA\"), Not(And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\")), IsBlank(Find(\"consent\", Lower(ThisItem.Notes)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
+                            "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(ThisItem.Status))), Trim(ThisItem.Status) <> \"Pending Bid\"), cOk: Or(Trim(ThisItem.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(ThisItem.Notes))))), nReq: Or(Not(IsBlank(Trim(ThisItem.'Agency/Insurer'))), Trim(ThisItem.Status) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(ThisItem.'NOA Received'))), Not(Trim(ThisItem.'NOA Received') in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(ThisItem.Notes)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Or(Not(cReq), Not(consent)), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -8054,7 +8054,7 @@
                           {
                             "Property": "FontWeight",
                             "Category": "Design",
-                            "InvariantScript": "FontWeight.Semibold",
+                            "InvariantScript": "FontWeight.Normal",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -8168,7 +8168,7 @@
                           {
                             "Property": "Size",
                             "Category": "Design",
-                            "InvariantScript": "12",
+                            "InvariantScript": "11",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -8461,7 +8461,7 @@
                       {
                         "Property": "BorderColor",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(89, 0, 0, 1)",
+                        "InvariantScript": "RGBA(200, 198, 196, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8497,7 +8497,7 @@
                       {
                         "Property": "Color",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(255, 255, 255, 1)",
+                        "InvariantScript": "RGBA(50, 49, 48, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8509,13 +8509,13 @@
                       {
                         "Property": "PressedColor",
                         "Category": "Design",
-                        "InvariantScript": "Self.Fill",
+                        "InvariantScript": "RGBA(50, 49, 48, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Property": "HoverColor",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(255, 255, 255, 1)",
+                        "InvariantScript": "RGBA(50, 49, 48, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8527,7 +8527,7 @@
                       {
                         "Property": "Fill",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(89, 0, 0, 1)",
+                        "InvariantScript": "RGBA(255, 255, 255, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8539,13 +8539,13 @@
                       {
                         "Property": "PressedFill",
                         "Category": "Design",
-                        "InvariantScript": "Self.Color",
+                        "InvariantScript": "RGBA(237, 235, 233, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
                         "Property": "HoverFill",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(120, 0, 0, 1)",
+                        "InvariantScript": "RGBA(243, 242, 241, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8593,7 +8593,7 @@
                       {
                         "Property": "Height",
                         "Category": "Design",
-                        "InvariantScript": "36",
+                        "InvariantScript": "32",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8827,7 +8827,7 @@
                       {
                         "Property": "BorderColor",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(89, 0, 0, 1)",
+                        "InvariantScript": "RGBA(200, 198, 196, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8863,7 +8863,7 @@
                       {
                         "Property": "Color",
                         "Category": "Design",
-                        "InvariantScript": "If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(89, 0, 0, 1))",
+                        "InvariantScript": "If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(50, 49, 48, 1))",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8881,7 +8881,7 @@
                       {
                         "Property": "HoverColor",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(255, 255, 255, 1)",
+                        "InvariantScript": "If(needsAttentionOnly, RGBA(255, 255, 255, 1), RGBA(50, 49, 48, 1))",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8911,7 +8911,7 @@
                       {
                         "Property": "HoverFill",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(222, 179, 184, 1)",
+                        "InvariantScript": "If(needsAttentionOnly, ColorFade(RGBA(164, 38, 44, 1), -20%), RGBA(243, 242, 241, 1))",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -8959,7 +8959,7 @@
                       {
                         "Property": "Height",
                         "Category": "Design",
-                        "InvariantScript": "36",
+                        "InvariantScript": "32",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -9211,7 +9211,7 @@
                       {
                         "Property": "Color",
                         "Category": "Design",
-                        "InvariantScript": "RGBA(70, 68, 64, 1)",
+                        "InvariantScript": "RGBA(96, 94, 92, 1)",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -10151,7 +10151,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -10479,7 +10479,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(0, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -10569,7 +10569,7 @@
                           {
                             "Property": "FontWeight",
                             "Category": "Design",
-                            "InvariantScript": "FontWeight.Normal",
+                            "InvariantScript": "FontWeight.Semibold",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -10641,7 +10641,7 @@
                           {
                             "Property": "Size",
                             "Category": "Design",
-                            "InvariantScript": "13",
+                            "InvariantScript": "16",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -10848,7 +10848,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -11158,7 +11158,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -11468,7 +11468,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -11778,7 +11778,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(164, 38, 44, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12088,7 +12088,7 @@
                           {
                             "Property": "Text",
                             "Category": "Data",
-                            "InvariantScript": "If(RecordsGallery1.Selected.'Has attachments', \"Docs attached\", \"No docs\")",
+                            "InvariantScript": "If(RecordsGallery1.Selected.'Has attachments', \"Docs attached\", \"No docs attached\")",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12106,7 +12106,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "If(RecordsGallery1.Selected.'Has attachments', RGBA(16, 124, 16, 1), RGBA(166, 166, 166, 1))",
+                            "InvariantScript": "If(RecordsGallery1.Selected.'Has attachments', RGBA(16, 124, 16, 1), RGBA(96, 94, 92, 1))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12310,7 +12310,7 @@
                           {
                             "Property": "Size",
                             "Category": "Design",
-                            "InvariantScript": "12",
+                            "InvariantScript": "11",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12489,7 +12489,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(50, 49, 48, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12817,7 +12817,7 @@
                           {
                             "Property": "Color",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(255, 255, 255, 1)",
+                            "InvariantScript": "If(Trim(RecordsGallery1.Selected.Status) in [\"Paid\", \"Warranty\", \"Closed\"], RGBA(16, 124, 16, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready To Bill\", \"Awaiting Payment\", \"Billed\"], RGBA(164, 38, 44, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(96, 94, 92, 1), RGBA(176, 120, 0, 1)))))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12877,7 +12877,7 @@
                           {
                             "Property": "Fill",
                             "Category": "Design",
-                            "InvariantScript": "If(Trim(RecordsGallery1.Selected.Status) in [\"Paid\", \"Warranty\", \"Closed\"], RGBA(16, 124, 16, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready To Bill\", \"Awaiting Payment\", \"Billed\"], RGBA(164, 38, 44, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\"], RGBA(0, 90, 158, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(166, 166, 166, 1), RGBA(176, 120, 0, 1)))))",
+                            "InvariantScript": "If(Trim(RecordsGallery1.Selected.Status) in [\"Paid\", \"Warranty\", \"Closed\"], RGBA(223, 246, 221, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready To Bill\", \"Awaiting Payment\", \"Billed\"], RGBA(253, 231, 233, 1), If(Trim(RecordsGallery1.Selected.Status) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\"], RGBA(222, 236, 249, 1), If(IsBlank(Trim(RecordsGallery1.Selected.Status)), RGBA(237, 235, 233, 1), RGBA(255, 244, 206, 1)))))",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12943,7 +12943,7 @@
                           {
                             "Property": "Height",
                             "Category": "Design",
-                            "InvariantScript": "28",
+                            "InvariantScript": "24",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -12961,7 +12961,7 @@
                           {
                             "Property": "Size",
                             "Category": "Design",
-                            "InvariantScript": "12",
+                            "InvariantScript": "11",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -13501,7 +13501,7 @@
                           {
                             "Property": "BorderColor",
                             "Category": "Design",
-                            "InvariantScript": "RGBA(89, 0, 0, 1)",
+                            "InvariantScript": "RGBA(200, 198, 196, 1)",
                             "RuleProviderType": "Unknown"
                           },
                           {
@@ -13676,7 +13676,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -13712,7 +13712,7 @@
                               {
                                 "Property": "Height",
                                 "Category": "Design",
-                                "InvariantScript": "ErrorMessage1.Y + ErrorMessage1.Height + 26",
+                                "InvariantScript": "ErrorMessage1.Y + ErrorMessage1.Height + 18",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -14194,7 +14194,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -14562,7 +14562,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -14622,7 +14622,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -15246,7 +15246,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -15336,7 +15336,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -15390,7 +15390,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -15550,7 +15550,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -16068,7 +16068,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -16436,7 +16436,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -16496,7 +16496,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -17134,7 +17134,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -17652,7 +17652,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -18020,7 +18020,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -18080,7 +18080,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -18718,7 +18718,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -19236,7 +19236,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -19604,7 +19604,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -19664,7 +19664,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -20302,7 +20302,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -20820,7 +20820,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -21188,7 +21188,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -21248,7 +21248,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -21886,7 +21886,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -22404,7 +22404,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -22772,7 +22772,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -22832,7 +22832,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -23464,7 +23464,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -23500,7 +23500,7 @@
                               {
                                 "Property": "Height",
                                 "Category": "Design",
-                                "InvariantScript": "ErrorMessage7.Y + ErrorMessage7.Height + 26",
+                                "InvariantScript": "ErrorMessage7.Y + ErrorMessage7.Height + 18",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -23974,7 +23974,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -24336,7 +24336,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -24396,7 +24396,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -25019,7 +25019,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -25109,7 +25109,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -25163,7 +25163,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -25317,7 +25317,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -25827,7 +25827,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -26189,7 +26189,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -26249,7 +26249,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -26880,7 +26880,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -27390,7 +27390,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -27752,7 +27752,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -27812,7 +27812,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -28443,7 +28443,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -28953,7 +28953,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -29315,7 +29315,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -29375,7 +29375,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -30006,7 +30006,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -30516,7 +30516,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -30878,7 +30878,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -30938,7 +30938,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31543,7 +31543,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - (Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0))) > 0.005, \"Calculated total expenses: \" & Text(Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0), \"[$-en-US]$#,##0.00\") & \" - entered value kept, press Use Calculated Totals to apply\", \"Calculated total expenses: \" & Text(Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0), \"[$-en-US]$#,##0.00\") & \" - matches\")",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0) }, \"Calculated total expenses \" & Text(calc, \"[$-en-US]$#,##0.00\") & If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - calc) > 0.005, \"  \u00b7  differs from the entered value\", \" \u2713\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31561,7 +31561,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - (Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue8.Text), 0) + Coalesce(Value(DataCardValue9.Text), 0) + Coalesce(Value(DataCardValue10.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue11.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31833,7 +31833,7 @@
                                   {
                                     "Property": "BorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(Self.Fill, -15%)",
+                                    "InvariantScript": "RGBA(200, 198, 196, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31869,7 +31869,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31881,13 +31881,13 @@
                                   {
                                     "Property": "PressedColor",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Fill",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31899,7 +31899,7 @@
                                   {
                                     "Property": "Fill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(164, 38, 44, 1)",
+                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31911,13 +31911,13 @@
                                   {
                                     "Property": "PressedFill",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Color",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(RGBA(164, 38, 44, 1), -20%)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -31965,7 +31965,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "36",
+                                    "InvariantScript": "32",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -32163,7 +32163,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -32673,7 +32673,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -33035,7 +33035,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -33095,7 +33095,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -33700,7 +33700,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - (Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0))) > 0.005, \"Calculated profit: \" & Text(Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0), \"[$-en-US]$#,##0.00\") & \" - entered value kept, press Use Calculated Totals to apply\", \"Calculated profit: \" & Text(Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0), \"[$-en-US]$#,##0.00\") & \" - matches\")",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0) }, \"Calculated profit \" & Text(calc, \"[$-en-US]$#,##0.00\") & If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - calc) > 0.005, \"  \u00b7  differs from the entered value\", \" \u2713\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -33718,7 +33718,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - (Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue7.Text), 0) - Coalesce(Value(DataCardValue11.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue12.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -34022,7 +34022,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -34540,7 +34540,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -34908,7 +34908,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -34968,7 +34968,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -35574,7 +35574,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Trim(DataCardValue13.Text) <> If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\"), \"Calculated margin: \" & If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\") & \" - entered value kept, press Use Calculated Totals to apply\", \"Calculated margin: \" & If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\") & \" - matches\")",
+                                    "InvariantScript": "With({ calc: If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\") }, \"Calculated margin \" & calc & If(Trim(DataCardValue13.Text) <> calc, \"  \u00b7  differs from the entered value\", \" \u2713\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -35592,7 +35592,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Trim(DataCardValue13.Text) <> If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\"), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))",
+                                    "InvariantScript": "With({ calc: If(Coalesce(Value(DataCardValue7.Text), 0) > 0, Text(Coalesce(Value(DataCardValue12.Text), 0) / Value(DataCardValue7.Text), \"0.0%\"), \"n/a\") }, If(Trim(DataCardValue13.Text) <> calc, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -35896,7 +35896,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -36414,7 +36414,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -36782,7 +36782,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -36842,7 +36842,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37492,7 +37492,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Pipeline: Pre-Estimate \u2022 Pending Bid \u2022 Awaiting NOA \u2022 Ready For Scheduling \u2022 Scheduled \u2022 Active \u2022 Awaiting Signoff \u2022 Ready To Bill \u2022 Awaiting Payment \u2022 Paid \u2022 Warranty \u2022 Closed\"",
+                                    "InvariantScript": "\"Stages: Pre-Estimate \u2192 Pending Bid \u2192 Awaiting NOA \u2192 Ready For Scheduling \u2192 Scheduled \u2192 Active \u2192 Awaiting Signoff \u2192 Ready To Bill \u2192 Awaiting Payment \u2192 Paid \u2192 Warranty \u2192 Closed\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37510,7 +37510,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37624,7 +37624,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DataCardValue14.Y + DataCardValue14.Height + 20",
+                                    "InvariantScript": "DataCardValue14.Y + DataCardValue14.Height + 10",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37636,7 +37636,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "40",
+                                    "InvariantScript": "If(Or(editMode, newMode), 36, 0)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37648,7 +37648,7 @@
                                   {
                                     "Property": "Visible",
                                     "Category": "Design",
-                                    "InvariantScript": "true",
+                                    "InvariantScript": "Or(editMode, newMode)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37660,7 +37660,7 @@
                                   {
                                     "Property": "AutoHeight",
                                     "Category": "Design",
-                                    "InvariantScript": "true",
+                                    "InvariantScript": "false",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37824,7 +37824,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Scheduling Readiness\"",
+                                    "InvariantScript": "\"Scheduling readiness\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37842,7 +37842,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37956,7 +37956,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "StageValidationIndicator1.Y + StageValidationIndicator1.Height + 10",
+                                    "InvariantScript": "StageValidationIndicator1.Y + StageValidationIndicator1.Height + 12",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -37968,7 +37968,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "26",
+                                    "InvariantScript": "22",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38156,7 +38156,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\")), \"Contract Status: Not required yet (bid stage)\", If(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), \"Contract Status: On file\", \"Contract Status: Missing - blocks scheduling\"))",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), If(And(And(cReq, Not(cOk)), And(nReq, Not(nOk))), \"Missing Contract and NOA\", If(And(cReq, Not(cOk)), \"Missing Contract\", \"Missing NOA\")), If(Not(cReq), \"Contract not required at bid stage\", \"Contract and NOA requirements met\")))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38174,7 +38174,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\")), RGBA(176, 120, 0, 1), If(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Not(cReq), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38264,7 +38264,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Semibold",
+                                    "InvariantScript": "FontWeight.Normal",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38288,7 +38288,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "SchedulingReadinessHeader1.Y + SchedulingReadinessHeader1.Height",
+                                    "InvariantScript": "SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 6",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38300,7 +38300,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "22",
+                                    "InvariantScript": "20",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38488,7 +38488,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), \"NOA Status: Not required\", If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), \"NOA Status: Received\", \"NOA Status: Missing - blocks scheduling\"))",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, \"Contract: \" & If(Not(cReq), \"Not required yet\", If(cOk, \"On file\", \"Missing\")) & \"  \u00b7  \" & \"NOA: \" & If(Not(nReq), \"Not required\", If(nOk, \"Received\", \"Missing\")))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38506,7 +38506,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), RGBA(176, 120, 0, 1), If(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1)))",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38596,7 +38596,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Semibold",
+                                    "InvariantScript": "FontWeight.Normal",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38632,7 +38632,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "22",
+                                    "InvariantScript": "20",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38820,7 +38820,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))), \"Consent To Start: Noted (warning only)\", \"Consent To Start: Not noted (warning only - does not block scheduling)\")",
+                                    "InvariantScript": "If(Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))), \"\", \"Consent To Start not noted  \u00b7  warning only, does not block scheduling\")",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38838,7 +38838,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1))",
+                                    "InvariantScript": "RGBA(176, 120, 0, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -38964,7 +38964,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "22",
+                                    "InvariantScript": "If(Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))), 0, 20)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39140,7 +39140,8 @@
                                   "Size",
                                   "Italic",
                                   "Underline",
-                                  "Strikethrough"
+                                  "Strikethrough",
+                                  "Tooltip"
                                 ],
                                 "Rules": [
                                   {
@@ -39152,7 +39153,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"]))))), \"Scheduling Readiness: BLOCKED\", If(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\")), \"Scheduling Readiness: Needs attention (bid stage)\", If(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text))), \"Scheduling Readiness: Ready (verify Consent To Start)\", \"Scheduling Readiness: Ready\")))",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), \"Blocked\", If(Or(Not(cReq), Not(consent)), \"Needs Attention\", \"Ready\")))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39170,7 +39171,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Or(And(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))))), And(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), Not(And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"]))))), RGBA(164, 38, 44, 1), If(Or(Not(And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\")), IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(164, 38, 44, 1), If(Or(Not(cReq), Not(consent)), RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39230,7 +39231,7 @@
                                   {
                                     "Property": "Fill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(0, 0, 0, 0)",
+                                    "InvariantScript": "With({ cReq: And(Not(IsBlank(Trim(DataCardValue14.Text))), Trim(DataCardValue14.Text) <> \"Pending Bid\"), cOk: Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text))))), nReq: Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\"), nOk: And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])), consent: Not(IsBlank(Find(\"consent\", Lower(DataCardValue22.Text)))) }, If(Or(And(cReq, Not(cOk)), And(nReq, Not(nOk))), RGBA(253, 231, 233, 1), If(Or(Not(cReq), Not(consent)), RGBA(255, 244, 206, 1), RGBA(223, 246, 221, 1))))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39266,7 +39267,7 @@
                                   {
                                     "Property": "Align",
                                     "Category": "Design",
-                                    "InvariantScript": "Align.Left",
+                                    "InvariantScript": "Align.Center",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39284,19 +39285,19 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 6",
+                                    "InvariantScript": "SchedulingReadinessHeader1.Y + SchedulingReadinessHeader1.Height + 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "150",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "26",
+                                    "InvariantScript": "24",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39374,7 +39375,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "12",
+                                    "InvariantScript": "11",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39393,6 +39394,12 @@
                                     "Property": "Strikethrough",
                                     "Category": "Design",
                                     "InvariantScript": "false",
+                                    "RuleProviderType": "Unknown"
+                                  },
+                                  {
+                                    "Property": "Tooltip",
+                                    "Category": "Data",
+                                    "InvariantScript": "\"Only a missing Contract or NOA can block scheduling. Consent To Start is a warning only.\"",
                                     "RuleProviderType": "Unknown"
                                   }
                                 ],
@@ -39440,7 +39447,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) = 0, \"Stage: not set - pick a stage from the list below\", \"Stage \" & Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) & \" of 12: \" & Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\"))",
+                                    "InvariantScript": "If(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) = 0, \"Stage not set\", \"Stage \" & Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) & \" of 12  \u00b7  \" & Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39458,7 +39465,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39572,7 +39579,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 8",
+                                    "InvariantScript": "StatusValuesGuidance1.Y + StatusValuesGuidance1.Height + 6",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39584,7 +39591,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "24",
+                                    "InvariantScript": "22",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39730,7 +39737,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) = 0, \"This value is not on the standard pipeline - use Advance Stage to move it onto the list\", If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\"), \"Standard pipeline value\", \"Legacy value - advancing moves it to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\")))",
+                                    "InvariantScript": "If(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) = 0, \"Not a standard pipeline value\", If(And(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) <> 0, Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\")), \"\", \"Legacy value  \u00b7  moves to Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") next\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39748,7 +39755,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) = 0, RGBA(164, 38, 44, 1), If(Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\"), RGBA(16, 124, 16, 1), RGBA(176, 120, 0, 1)))",
+                                    "InvariantScript": "RGBA(176, 120, 0, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -39874,7 +39881,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "22",
+                                    "InvariantScript": "If(And(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) <> 0, Trim(DataCardValue14.Text) = Switch(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Not set\")), 0, 20)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40014,7 +40021,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Advance Stage to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\")",
+                                    "InvariantScript": "\"Advance to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\")",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40140,19 +40147,19 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "SchedulingReadinessIndicator1.Y + SchedulingReadinessIndicator1.Height + 10",
+                                    "InvariantScript": "ConsentToStartIndicator1.Y + ConsentToStartIndicator1.Height + 12",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "260",
+                                    "InvariantScript": "240",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "36",
+                                    "InvariantScript": "32",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40224,7 +40231,7 @@
                                   {
                                     "Property": "OnSelect",
                                     "Category": "Behavior",
-                                    "InvariantScript": "If(And(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1 >= 4, Or(Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])))))), Notify(\"Cannot advance to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") & \": \" & If(Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text)))))), \"contract is not on file. \", \"\") & If(Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])))), \"NOA has not been received.\", \"\"), NotificationType.Error, 4000), UpdateContext({ stageOverride: Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") }); Reset(DataCardValue14); Notify(\"Stage set to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") & \". Save the record to apply it.\", NotificationType.Success, 3000))",
+                                    "InvariantScript": "If(And(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1 >= 4, Or(Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"])))))), Notify(\"Cannot advance to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") & \"  \u00b7  \" & If(And(Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text)))))), Not(If(Not(Or(Not(IsBlank(Trim(DataCardValue3.Text))), Trim(DataCardValue14.Text) = \"Awaiting NOA\")), true, And(Not(IsBlank(Trim(DataCardValue15.Text))), Not(Trim(DataCardValue15.Text) in [\"No\", \"N\", \"Pending\", \"Not Received\", \"NA\", \"N/A\", \"-\", \"None\"]))))), \"Missing Contract and NOA\", If(Not(Or(Trim(DataCardValue14.Text) in [\"Ready For Scheduling\", \"Scheduled\", \"Active\", \"Awaiting Signoff\", \"Ready To Bill\", \"Awaiting Payment\", \"Paid\", \"Warranty\", \"Closed\"], Not(IsBlank(Find(\"contract\", Lower(DataCardValue22.Text)))))), \"Missing Contract\", \"Missing NOA\")), NotificationType.Error, 4000), UpdateContext({ stageOverride: Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") }); Reset(DataCardValue14); Notify(\"Stage set to \" & Switch(Min(Switch(Trim(DataCardValue14.Text), \"Pre-Estimate\", 1, \"Pending Bid\", 2, \"Awaiting NOA\", 3, \"Ready For Scheduling\", 4, \"Scheduled\", 5, \"Active\", 6, \"Awaiting Signoff\", 7, \"Ready To Bill\", 8, \"Awaiting Payment\", 9, \"Paid\", 10, \"Warranty\", 11, \"Closed\", 12, \"Won\", 2, \"Awaiting Contract\", 2, \"Pre Estimate\", 1, 0) + 1, 12), 1, \"Pre-Estimate\", 2, \"Pending Bid\", 3, \"Awaiting NOA\", 4, \"Ready For Scheduling\", 5, \"Scheduled\", 6, \"Active\", 7, \"Awaiting Signoff\", 8, \"Ready To Bill\", 9, \"Awaiting Payment\", 10, \"Paid\", 11, \"Warranty\", 12, \"Closed\", \"Pre-Estimate\") & \". Save the record to apply it.\", NotificationType.Success, 3000))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40318,13 +40325,13 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Step Back\"",
+                                    "InvariantScript": "\"Step back\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "BorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(Self.Fill, -15%)",
+                                    "InvariantScript": "RGBA(200, 198, 196, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40360,7 +40367,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40372,13 +40379,13 @@
                                   {
                                     "Property": "PressedColor",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Fill",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40402,13 +40409,13 @@
                                   {
                                     "Property": "PressedFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40438,7 +40445,7 @@
                                   {
                                     "Property": "X",
                                     "Category": "Design",
-                                    "InvariantScript": "300",
+                                    "InvariantScript": "282",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40450,13 +40457,13 @@
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "120",
+                                    "InvariantScript": "110",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "36",
+                                    "InvariantScript": "32",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40646,7 +40653,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40736,7 +40743,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40790,7 +40797,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -40950,7 +40957,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -41468,7 +41475,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -41836,7 +41843,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -41896,7 +41903,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -42534,7 +42541,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -43052,7 +43059,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -43420,7 +43427,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -43480,7 +43487,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -44118,7 +44125,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -44154,7 +44161,7 @@
                               {
                                 "Property": "Height",
                                 "Category": "Design",
-                                "InvariantScript": "ErrorMessage17.Y + ErrorMessage17.Height + 26",
+                                "InvariantScript": "ErrorMessage17.Y + ErrorMessage17.Height + 18",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -44636,7 +44643,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45004,7 +45011,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45064,7 +45071,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45688,7 +45695,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45778,7 +45785,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45832,7 +45839,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -45986,7 +45993,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -46496,7 +46503,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -46858,7 +46865,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -46918,7 +46925,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -47549,7 +47556,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -48059,7 +48066,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -48421,7 +48428,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -48481,7 +48488,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -49112,7 +49119,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -49622,7 +49629,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -49984,7 +49991,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -50044,7 +50051,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -50649,7 +50656,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - (Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0))) > 0.005, \"Calculated balance owed: \" & Text(Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0), \"[$-en-US]$#,##0.00\") & \" - entered value kept, press Use Calculated Totals to apply\", \"Calculated balance owed: \" & Text(Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0), \"[$-en-US]$#,##0.00\") & \" - matches\")",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0) }, \"Calculated balance owed \" & Text(calc, \"[$-en-US]$#,##0.00\") & If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - calc) > 0.005, \"  \u00b7  differs from the entered value\", \" \u2713\"))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -50667,7 +50674,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - (Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0))) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1))",
+                                    "InvariantScript": "With({ calc: Coalesce(Value(DataCardValue18.Text), 0) - Coalesce(Value(DataCardValue19.Text), 0) }, If(Abs(Coalesce(Value(DataCardValue20.Text), 0) - calc) > 0.005, RGBA(176, 120, 0, 1), RGBA(16, 124, 16, 1)))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -50971,7 +50978,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -51489,7 +51496,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -51857,7 +51864,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -51917,7 +51924,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -52555,7 +52562,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -52591,7 +52598,7 @@
                               {
                                 "Property": "Height",
                                 "Category": "Design",
-                                "InvariantScript": "ErrorMessage22.Y + ErrorMessage22.Height + 26",
+                                "InvariantScript": "ErrorMessage22.Y + ErrorMessage22.Height + 18",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -53073,7 +53080,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -53441,7 +53448,7 @@
                                   {
                                     "Property": "HoverBorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(138, 136, 134, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -53501,7 +53508,7 @@
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -54125,7 +54132,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -54215,7 +54222,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -54269,7 +54276,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -54423,7 +54430,7 @@
                               {
                                 "Property": "BorderColor",
                                 "Category": "Design",
-                                "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                "InvariantScript": "RGBA(200, 198, 196, 1)",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -54459,7 +54466,7 @@
                               {
                                 "Property": "Height",
                                 "Category": "Design",
-                                "InvariantScript": "DataCardValue23.Y + DataCardValue23.Height + 30",
+                                "InvariantScript": "DataCardValue23.Y + DataCardValue23.Height + 20",
                                 "RuleProviderType": "Unknown"
                               },
                               {
@@ -54933,7 +54940,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -55259,19 +55266,19 @@
                                   {
                                     "Property": "ItemFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(164, 38, 44, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "ItemColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "ItemHoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -55397,7 +55404,7 @@
                                   {
                                     "Property": "PressedColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -55457,13 +55464,13 @@
                                   {
                                     "Property": "PressedFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -55487,7 +55494,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "OpenProjectFolderButton1.Y + OpenProjectFolderButton1.Height + 12",
+                                    "InvariantScript": "OpenProjectFolderButton1.Y + OpenProjectFolderButton1.Height + 10",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56081,7 +56088,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Documents to attach for this project\"",
+                                    "InvariantScript": "\"Document checklist\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56099,7 +56106,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56225,7 +56232,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "24",
+                                    "InvariantScript": "22",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56303,7 +56310,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "12",
+                                    "InvariantScript": "11",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56413,7 +56420,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Contract\"",
+                                    "InvariantScript": "\"Contract\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56431,7 +56438,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56551,13 +56558,13 @@
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56745,7 +56752,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 NOA\"",
+                                    "InvariantScript": "\"NOA\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56763,7 +56770,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -56871,25 +56878,25 @@
                                   {
                                     "Property": "X",
                                     "Category": "Design",
-                                    "InvariantScript": "30",
+                                    "InvariantScript": "30 + (Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceContract1.Y + DocumentGuidanceContract1.Height",
+                                    "InvariantScript": "DocumentGuidanceContract1.Y",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57077,7 +57084,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Consent To Start\"",
+                                    "InvariantScript": "\"Consent To Start\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57095,7 +57102,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57209,19 +57216,19 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceNOA1.Y + DocumentGuidanceNOA1.Height",
+                                    "InvariantScript": "DocumentGuidanceContract1.Y + DocumentGuidanceContract1.Height",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57409,7 +57416,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Completion Signoff\"",
+                                    "InvariantScript": "\"Completion Signoff\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57427,7 +57434,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57535,25 +57542,25 @@
                                   {
                                     "Property": "X",
                                     "Category": "Design",
-                                    "InvariantScript": "30",
+                                    "InvariantScript": "30 + (Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceConsentToStart1.Y + DocumentGuidanceConsentToStart1.Height",
+                                    "InvariantScript": "DocumentGuidanceConsentToStart1.Y",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57741,7 +57748,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Change Order\"",
+                                    "InvariantScript": "\"Change Order\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57759,7 +57766,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -57873,19 +57880,19 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceCompletionSignoff1.Y + DocumentGuidanceCompletionSignoff1.Height",
+                                    "InvariantScript": "DocumentGuidanceConsentToStart1.Y + DocumentGuidanceConsentToStart1.Height",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58073,7 +58080,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Warranty\"",
+                                    "InvariantScript": "\"Warranty\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58091,7 +58098,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58199,25 +58206,25 @@
                                   {
                                     "Property": "X",
                                     "Category": "Design",
-                                    "InvariantScript": "30",
+                                    "InvariantScript": "30 + (Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceChangeOrder1.Y + DocumentGuidanceChangeOrder1.Height",
+                                    "InvariantScript": "DocumentGuidanceChangeOrder1.Y",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58405,7 +58412,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"\u2022 Maintenance Guide\"",
+                                    "InvariantScript": "\"Maintenance Guide\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58423,7 +58430,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(70, 68, 64, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58537,19 +58544,19 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceWarranty1.Y + DocumentGuidanceWarranty1.Height",
+                                    "InvariantScript": "DocumentGuidanceChangeOrder1.Y + DocumentGuidanceChangeOrder1.Height",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "Parent.Width - 60",
+                                    "InvariantScript": "(Parent.Width - 60) / 2",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "20",
+                                    "InvariantScript": "18",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58737,7 +58744,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), \"Documents on file: \" & CountRows(Parent.Default) & \" attached below\", \"No documents attached yet\")",
+                                    "InvariantScript": "If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), \"Docs attached\", \"No docs attached\")",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58755,7 +58762,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), RGBA(16, 124, 16, 1), RGBA(164, 38, 44, 1))",
+                                    "InvariantScript": "If(Or(ThisItem.'Has attachments', CountRows(Parent.Default) > 0), RGBA(16, 124, 16, 1), RGBA(96, 94, 92, 1))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58869,7 +58876,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "DocumentGuidanceMaintenanceGuide1.Y + DocumentGuidanceMaintenanceGuide1.Height + 6",
+                                    "InvariantScript": "DocumentGuidanceMaintenanceGuide1.Y + DocumentGuidanceMaintenanceGuide1.Height + 8",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58881,7 +58888,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "26",
+                                    "InvariantScript": "22",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -58959,7 +58966,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "12",
+                                    "InvariantScript": "11",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59025,7 +59032,7 @@
                                   {
                                     "Property": "Text",
                                     "Category": "Data",
-                                    "InvariantScript": "\"Project Folder\"",
+                                    "InvariantScript": "\"Project folder\"",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59043,7 +59050,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(96, 94, 92, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59157,7 +59164,7 @@
                                   {
                                     "Property": "Y",
                                     "Category": "Design",
-                                    "InvariantScript": "AttachmentPresenceLabel1.Y + AttachmentPresenceLabel1.Height + 10",
+                                    "InvariantScript": "AttachmentPresenceLabel1.Y + AttachmentPresenceLabel1.Height + 6",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59169,7 +59176,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "26",
+                                    "InvariantScript": "22",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59187,7 +59194,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "12",
+                                    "InvariantScript": "11",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59333,7 +59340,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "If(IsBlank(Trim(DataCardValue1.Text)), RGBA(176, 120, 0, 1), RGBA(70, 68, 64, 1))",
+                                    "InvariantScript": "If(IsBlank(Trim(DataCardValue1.Text)), RGBA(176, 120, 0, 1), RGBA(96, 94, 92, 1))",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59459,7 +59466,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "22",
+                                    "InvariantScript": "20",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59612,7 +59619,7 @@
                                   {
                                     "Property": "BorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(Self.Fill, -15%)",
+                                    "InvariantScript": "RGBA(200, 198, 196, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59648,7 +59655,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59660,13 +59667,13 @@
                                   {
                                     "Property": "PressedColor",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Fill",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59678,7 +59685,7 @@
                                   {
                                     "Property": "Fill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(164, 38, 44, 1)",
+                                    "InvariantScript": "RGBA(255, 255, 255, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59690,13 +59697,13 @@
                                   {
                                     "Property": "PressedFill",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Color",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(RGBA(164, 38, 44, 1), -20%)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59738,13 +59745,13 @@
                                   {
                                     "Property": "Width",
                                     "Category": "Design",
-                                    "InvariantScript": "190",
+                                    "InvariantScript": "170",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "36",
+                                    "InvariantScript": "32",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59916,7 +59923,7 @@
                                   {
                                     "Property": "BorderColor",
                                     "Category": "Design",
-                                    "InvariantScript": "ColorFade(Self.Fill, -15%)",
+                                    "InvariantScript": "RGBA(200, 198, 196, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59952,7 +59959,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59964,13 +59971,13 @@
                                   {
                                     "Property": "PressedColor",
                                     "Category": "Design",
-                                    "InvariantScript": "Self.Fill",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverColor",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -59994,13 +60001,13 @@
                                   {
                                     "Property": "PressedFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(237, 235, 233, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
                                     "Property": "HoverFill",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(222, 179, 184, 1)",
+                                    "InvariantScript": "RGBA(243, 242, 241, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -60030,7 +60037,7 @@
                                   {
                                     "Property": "X",
                                     "Category": "Design",
-                                    "InvariantScript": "230",
+                                    "InvariantScript": "210",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -60048,7 +60055,7 @@
                                   {
                                     "Property": "Height",
                                     "Category": "Design",
-                                    "InvariantScript": "36",
+                                    "InvariantScript": "32",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -60238,7 +60245,7 @@
                                   {
                                     "Property": "Color",
                                     "Category": "Design",
-                                    "InvariantScript": "RGBA(89, 0, 0, 1)",
+                                    "InvariantScript": "RGBA(50, 49, 48, 1)",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -60328,7 +60335,7 @@
                                   {
                                     "Property": "FontWeight",
                                     "Category": "Design",
-                                    "InvariantScript": "FontWeight.Bold",
+                                    "InvariantScript": "FontWeight.Semibold",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {
@@ -60382,7 +60389,7 @@
                                   {
                                     "Property": "Size",
                                     "Category": "Design",
-                                    "InvariantScript": "15",
+                                    "InvariantScript": "14",
                                     "RuleProviderType": "Unknown"
                                   },
                                   {

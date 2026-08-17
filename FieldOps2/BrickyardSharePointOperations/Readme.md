@@ -45,12 +45,26 @@ financial roll-ups and project folder links for the selected record.
 
 | Area | What the app does |
 | --- | --- |
-| Project list | Search, sort (newest / stage / amount owed), a "needs attention" filter (no stage, missing NOA, or money owed), a record count, a stage-coloured accent bar and a scheduling-readiness line per row |
-| Record header | Project title, stage chip coloured by lifecycle group, "Docs attached" badge, and a folder icon that opens the project's SharePoint document folder |
-| Workflow card | Stage indicator ("Stage n of 12"), readiness checks for contract / NOA / consent, **Advance Stage** (blocked with an explanation when readiness rules fail) and **Step Back** |
-| Financials | Total Expenses, Profit, Margin % and Currently Owed are calculated from their inputs; entered values are never overwritten on view — press **Use Calculated Totals** to apply them |
-| Documents | Document guidance checklist, the derived project folder path, **Open Project Folder** and **Open List Item** |
+| Project list | Search, sort (newest / stage / amount owed), a "needs attention" filter (no stage, missing NOA, or money owed), a record count, a stage-coloured accent bar and a one-line scheduling-readiness summary per row |
+| Record header | Project title, stage chip tinted by lifecycle group, "Docs attached" / "No docs attached" badge, and a folder icon that opens the project's SharePoint document folder |
+| Workflow card | Stage indicator ("Stage n of 12"), a compact readiness chip (Ready / Needs Attention / Blocked) with a one-line blocker reason, **Advance to &lt;next stage&gt;** (blocked with a short reason when readiness rules fail) and **Step back** |
+| Financials | Total Expenses, Profit, Margin % and Currently Owed are calculated from their inputs; entered values are never overwritten on view — press **Use Calculated Totals** to apply them. Helper lines show a green tick when the entered value matches and amber text when it differs |
+| Documents | Two-column document checklist, "Docs attached" / "No docs attached", the derived project folder path, **Open Project Folder** and **Open List Item** |
 | Safety | Success notification and data refresh after save, seeded "No" defaults for NOA Received / Billed / Change Order on new records, and a delete that requires a typed reason |
+
+### Scheduling readiness rule
+
+Only a missing **Contract** or a missing **NOA** can block scheduling. **Consent To Start** is a
+warning only and never blocks: the readiness chip drops to *Needs Attention*, but the record can
+still advance.
+
+### Visual language
+
+The screen follows Microsoft Lists / SharePoint conventions: white cards, light grey separators
+(`RGBA(237, 235, 233, 1)`), dark neutral text (`RGBA(50, 49, 48, 1)`) for headings and field
+labels, and grey secondary text (`RGBA(96, 94, 92, 1)`) for supporting lines. Colour is reserved
+for small tinted status chips — green for Ready, gold for Needs Attention, red for Blocked.
+Brickyard red stays on the app header, the primary **Advance** action and genuine warnings.
 
 ### Folder link convention
 
